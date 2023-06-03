@@ -1,0 +1,275 @@
+hh
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BHATIYA by Avdhut </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .navbar{
+       position: fixed;
+        }
+        .navbar{  justify-content: space-between;
+        }
+        .carousel {
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        #design{
+          justify-content: space-around;
+          
+        }
+        #tcol{
+          justify-content: space-between;
+        }
+        #arow{
+          justify-content: space-between;
+        }
+        #login{
+          margin-top: 60px;
+        }
+      
+    </style>
+  </head>
+  <body>
+     <!-- navbar start -->
+ <nav class="navbar  navbar-expand-sm  bg-dark fixed-top" >
+        <div class="container  " >
+            <div id="bbh">
+
+                <button class="navbar-brand text-bg-dark text-light " style="border: 0px;" type="button"  data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" href="#">BHATIYA<sup class="text-warning" style="font-weight: bold;">by Avdhut</sup></button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-between;">
+                <div class="navbar-nav gap-3 d-flex">
+                    <a class="text-decoration-underline text-light " href="">Mechanics</a>
+                    <button class="text-light text-bg-dark text-decoration-none" style=" height: 30px; width: 60px; border: 0px; " onclick="ryde()" href="">Geomerty</button>
+       </div>
+                      <div class="text-p gap-4 ">
+ <div class="ms-auto gap-3" style="display:inline;">
+                </div>
+                            <button type="button" onclick="login()" class="btn btn-outline-light gap-3" data-bs-toggle="collapse"
+                                data-bs-target="#">Design</button>
+                        </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+
+     <!-- carousel start -->
+  <div id="carouselExampleCaptions" class="carousel slide alert alert-dark form-control" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active text-center" height="50" width="100">
+        <div class="container">
+          <a class="text-decoration-none"
+            href="">
+
+            <div class="row text-center">
+              <div class="col-sm-12 text-end text-center">
+                <img class="img-fluid w-75 "
+                  src="k.kumar//gear2.png"
+                  alt="">
+              </div>
+              
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="container">
+          <a class="text-decoration-none"
+            href="">
+
+            <div class="row text-center">
+              <div class="col-sm-12 text-end text-center">
+                <img class="img-fluid w-50 "
+                  src="k.kumar/gear3.png"
+                  alt="">
+              </div>
+            </div>
+          </a>
+</div>
+      </div>
+
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- carousel end -->
+
+<!-- Design start -->
+<div class="container text-center form-control d-none " id="login" >
+  <h4>put out application based information</h4>
+  <div class="row justify-content-around text-center form-control" id="design">
+    <div class="col-sm-2  form-control  " >
+      <p>maximum power of transmition (in waat) </p>
+      <div class="d-flex  form-control">
+        <input type="number" id="power"> Waat
+      </div>
+    </div>
+
+      <div class="col-sm-2  form-control  " >
+      <p>maximum speed of gear during trasmition (in RPM)</p>
+    <div class="d-flex  form-control">
+      <input type="number" id="RPM">RPM
+    </div>  
+  </div>
+
+  <div class="col-sm-2  form-control  " >
+    <p>Enter serves factor (SV)</p>
+  <div class="d-flex  form-control">
+    <input type="number" id="sarvesf">
+  </div>  
+</div>
+
+<div class="col-sm-2  form-control  " >
+  <p>Enter factor of Safty (FOS)</p>
+<div class="d-flex  form-control">
+  <input type="number" id="FOS">
+</div>  
+</div>
+
+    <div class="col-sm-2 form-control  " >
+      <p> Maximum Stress on Gear</p>
+      <div class="d-flex form-control">
+        <input type="number form-contol" id="stress">
+        <select class="form-select " id="material">
+          <option selected>ultimet tensil stress (ult)</option>
+          <option value="1">parmisibal Bending Stress (ben)</option>
+        </select>
+      </div>
+    </div>
+   
+    <div class="col-sm-2 form-control  " >
+      <p>Involut Profial of Your Gear</p>
+      <select class="form-select " id="involut">
+        <option selected>14.5 Fulldepth</option>
+        <option value="1">20 Full depth</option>
+        <option value="2">20  Stub Involut</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-around text-center form-control">
+    <div class="col-sm-3  form-control  " >
+      <p>number of teeth of pinion </p>
+    <div class="d-flex  form-control">
+      <input type="number" id="pteeth">
+    </div>  
+  </div>
+  
+  <div class="col-sm-3  form-control  " >
+    <p>number of teeth of gear </p>
+    <div class="d-flex  form-control">
+      <input type="number" id="gteeth">
+      
+    </div>  
+  </div>
+
+  <div class="col-sm-3  form-control  " >
+    <p>modulus </p>
+    <div class="d-flex  form-control">
+      <input type="number" id="modul">
+      
+    </div>  
+  </div>
+
+  <div class="col-sm-3  form-control  " >
+    <p>Diametral pitch </p>
+    <div class="d-flex  form-control">
+      <input type="number" id="dp">
+      
+    </div>  
+  </div>
+
+</div>
+  <div class=" form-control">
+    <button type="button"onclick="data()" class="btn btn-primary w-100">GET</button>
+  </div>
+
+
+   
+<div class="container text-center form-control">
+  <div class="row" id="arow">
+    <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+      <h6>Torque is  </h6>
+      <h6 id="torque">  </h6>
+    </div>
+    <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+     <h6> tagential force is </h6>
+     <h6 id="ptangent"></h6>
+    </div>
+    <div class="col-sm-2 form-control d-flex gap-3"id="tcol">
+     <h6> velocity(m/sec) </h6>
+     <h6 id="velocity"></h6>
+    </div>
+    <div class="col-sm-2 form-control d-flex  gap-3"id="tcol">
+     <h6> velocity factor </h6>
+     <h6 id="CV"></h6>
+    </div>
+    <div class="col-sm-2 form-control d-flex  gap-3"id="tcol">
+     <h6>Effective Lode </h6>
+     <h6 id="peffect"></h6>
+    </div>
+    <div class="col-sm-2 form-control d-flex  gap-3"id="tcol">
+     <h6>Lewis form factor </h6>
+     <h6 id="lewis"></h6>
+    </div>
+  </div>
+
+
+   <div class="row" id="arow">
+    
+    <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+      <h6>width of Gear  </h6>
+      <h6 id="width"> </h6>
+    </div>
+    
+     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+       <h6>Beam Strength of Gear  </h6>
+       <h6 id="bstrengh"> </h6>
+     </div>
+
+    
+   </div>
+</div>
+
+
+</div>
+ 
+<!-- Design end -->
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+  <script src="application.js"></script>
+  </body>
+</html>
