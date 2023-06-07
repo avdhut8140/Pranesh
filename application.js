@@ -3,7 +3,7 @@
 // const T=document.getElementById("torque").value...
 let condition1= true
 function login(){
-
+       
     if (condition1) {
         document.getElementById("login").classList.remove("d-none")
         document.getElementById("carouselExampleCaptions").classList.add("d-none")
@@ -17,18 +17,25 @@ function login(){
 }
 const O=60 *1000/6.28
 let X=""
- let velocity =""
+let velocity =""
+
+
+
+let condition2= true
+
 
 function data() {
+    
+
     const sigma = document.querySelector("#stress").value
     const material = document.querySelector("#material").value
     const torque = document.querySelector("#torque")
-    const RPM=document.querySelector("#RPM").value
+    const RPM=document.querySelector("#RPM").value 
     const power = document.querySelector("#power").value
-    const gteeth = document.querySelector("#gteeth").value
-    const pteeth = document.querySelector("#pteeth").value
+    var gteeth = parseFloat(document.querySelector("#gteeth").value)
+    var pteeth = parseFloat(document.querySelector("#pteeth").value)
     const dp=document.querySelector("#dp").value
-    const Modul =document.querySelector("#modul").value
+    const Modul1 =document.querySelector("#modul").value
     const SV =document.querySelector("#sarvesf").value
     const FOS =document.querySelector("#FOS").value
     const involut =document.querySelector("#involut").value
@@ -37,25 +44,45 @@ function data() {
     const M1="ultimet tensil stress (ult)"
     const M2="parmisibal Bending Stress (ben)"
     
+
+
+    if (condition2) {
+        document.getElementById("ans").classList.remove("d-none")
+        condition2 = false
+        
+      } else {
+          condition2 = true
+        //   panik();
+        }
+
+
+
     let T= power*9554140.127/RPM
     console.log(T);
     torque.innerHTML=T
-   
-    if (dp==="") { 
-        velocity= 0.0000523598*Modul*pteeth*RPM
+    let Modul=""
+    if (dp==="") {
+        Modul=document.querySelector("#modul").value
     } else {
-        velocity=0.0000523598*dp*RPM
+        
+        Modul=dp/pteeth
     }
+     
+    
+    velocity=0.0000523598*Modul*pteeth*RPM
     document.querySelector("#velocity").innerHTML= velocity
   
     let F = ""
-    if (dp==="") { 
-    F= 2*T/(Modul*pteeth)
- } else {
-    F= 2*T/dp
- }
+F= 2*T/(Modul*pteeth)
  document.querySelector("#ptangent").innerHTML=F
 
+ if (velocity>20) {  
+     
+     var root= Math.sqrt(velocity)
+    
+ } else {
+    
+ }
  let CV=""
  if (velocity<10) {   
     CV=3/(3+velocity)
@@ -63,7 +90,7 @@ function data() {
 } else if ( 20>velocity>10) {  
     CV=6/(6+velocity)
     
-}else{ CV=5.6/(5.6+velocity) }
+}else{ CV=5.6/(5.6+root) }
 
 document.querySelector("#CV").innerHTML= CV
 
@@ -98,4 +125,48 @@ bstrengh=stress*width*Y*Modul
 document.querySelector("#bstrengh").innerHTML=bstrengh
 console.log(bstrengh);
 
+let wstrengh = ""
+wstrengh= FOS*peffect
+document.querySelector("#wstrengh").innerHTML=wstrengh
+
+var Q =2*gteeth/(pteeth+gteeth);
+console.warn(Q);
+console.warn(pteeth);
+console.warn(gteeth);
+console.log(pteeth + gteeth);
+   
+var nacent = 0.16*Q*width*Modul*pteeth
+console.log("Q=",Q);
+console.log("width",width);
+console.log("modul=",Modul);
+console.log("pteeth=",peffect);
+console.log("nacent=",nacent);
+var lob=10000*FOS*peffect/nacent
+console.log("FOS=",FOS);
+console.log("lob=",lob);
+var root1= Math.sqrt(lob)
+console.log("root1=",root1);
+console.log("BHN=",BHN);
+var BHN= root1
+document.querySelector("#BHN").innerHTML=BHN
+
+
+
 }
+
+
+// function panik(){
+    
+//     document.querySelector("#stress").value            =""
+//      document.querySelector("#material").value=""
+//      document.querySelector("#torque")=""
+//     document.querySelector("#RPM").value=""
+//      document.querySelector("#power").value=""
+//      document.querySelector("#gteeth").value=""
+//      document.querySelector("#pteeth").value=""
+//     document.querySelector("#dp").value=""
+//     document.querySelector("#modul").value=""
+//     document.querySelector("#sarvesf").value=""
+//     document.querySelector("#FOS").value=""
+//     document.querySelector("#involut").value=""
+// }

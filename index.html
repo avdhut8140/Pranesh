@@ -1,4 +1,4 @@
-hh
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,34 +12,54 @@ hh
         #bbh{
             justify-content: space-between;
         }
-        .navbar{
-       position: fixed;
-        }
         .navbar{  justify-content: space-between;
+          position: fixed;
+          background-color: chartreuse;
+        }
+        #btn{
+          background-color:coral;
         }
         .carousel {
-            margin-top: 10vh;
+            margin-top: 6vh;
            
+        }
+        .d-flex{
+          background-color: bisque;
+        }
+        .col-sm-2{
+          background-color: rgb(219, 219, 97);
+        }
+        .col-sm-3{
+          background-color: rgb(219, 219, 97) ;
         }
         #design{
           justify-content: space-around;
-          
+          background-color: violet;
+        }
+        #ans{
+          background-color: violet;
         }
         #tcol{
           justify-content: space-between;
+          background-color: springgreen;
         }
         #arow{
           justify-content: space-between;
         }
         #login{
-          margin-top: 10vh;
+          margin-bottom: 10vh;
+          background-color: cyan;
+         
+        }
+        .form-select{ 
+          background-color: rgb(137, 240, 192);
         }
       
     </style>
   </head>
   <body>
      <!-- navbar start -->
- <nav class="navbar  navbar-expand-sm  bg-dark fixed-top" >
+ <nav class="navbar  navbar-expand-sm  bg-dark fixed-bottom" >
         <div class="container  " >
             <div id="bbh">
 
@@ -128,11 +148,12 @@ hh
 <!-- Design start -->
 <div class="container text-center form-control d-none " id="login" >
   <h4>put out application based information</h4>
-  <div class="row justify-content-around text-center form-control" id="design">
+  <div class="container">
+  <div class="row justify-content-around text-center" id="design">
     <div class="col-sm-2  form-control  " >
       <p>maximum power of transmition (in waat) </p>
       <div class="d-flex  form-control">
-        <input type="number" id="power"> Waat
+        <input type="number" id="power">k.Waat
       </div>
     </div>
 
@@ -160,7 +181,7 @@ hh
     <div class="col-sm-2 form-control  " >
       <p> Maximum Stress on Gear</p>
       <div class="d-flex form-control">
-        <input type="number form-contol" id="stress">
+        <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
         <select class="form-select " id="material">
           <option selected>ultimet tensil stress (ult)</option>
           <option value="1">parmisibal Bending Stress (ben)</option>
@@ -179,7 +200,7 @@ hh
 
   </div>
 
-  <div class="row justify-content-around text-center form-control">
+  <div class="row justify-content-around text-center " id="design">
     <div class="col-sm-3  form-control  " >
       <p>number of teeth of pinion </p>
     <div class="d-flex  form-control">
@@ -198,7 +219,7 @@ hh
   <div class="col-sm-3  form-control  " >
     <p>modulus </p>
     <div class="d-flex  form-control">
-      <input type="number" id="modul">
+      <input type="number" id="modul">mm
       
     </div>  
   </div>
@@ -206,19 +227,17 @@ hh
   <div class="col-sm-3  form-control  " >
     <p>Diametral pitch </p>
     <div class="d-flex  form-control">
-      <input type="number" id="dp">
+      <input type="number" id="dp">mm
       
     </div>  
   </div>
 
 </div>
-  <div class=" form-control">
-    <button type="button"onclick="data()" class="btn btn-primary w-100">GET</button>
-  </div>
+</div>
 
 
    
-<div class="container text-center form-control">
+<div class="container text-center form-control d-none" id="ans">
   <div class="row" id="arow">
     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
       <h6>Torque is  </h6>
@@ -248,7 +267,6 @@ hh
 
 
    <div class="row" id="arow">
-    
     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
       <h6>width of Gear  </h6>
       <h6 id="width"> </h6>
@@ -259,12 +277,24 @@ hh
        <h6 id="bstrengh"> </h6>
      </div>
 
+     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+       <h6>Wear Stength of Gear </h6>
+       <h6 id="wstrengh"> </h6>
+     </div>
+
+     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+       <h6> Suitable Hardness of Gear (BHN) </h6>
+       <h6 id="BHN"> </h6>
+     </div>
+
     
    </div>
 </div>
 
 
+  <button type="button"onclick="data()" id="btn" class="btn  w-100">GET</button>
 </div>
+
  
 <!-- Design end -->
 
