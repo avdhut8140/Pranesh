@@ -26,10 +26,10 @@
         .d-flex{
           background-color: bisque;
         }
-        .col-sm-2{
+        .jpj{
           background-color: rgb(219, 219, 97);
         }
-        .col-sm-3{
+        .ansrow{
           background-color: rgb(219, 219, 97) ;
         }
         #design{
@@ -54,6 +54,8 @@
         .form-select{ 
           background-color: rgb(137, 240, 192);
         }
+
+
       
     </style>
   </head>
@@ -90,7 +92,7 @@
 
 
      <!-- carousel start -->
-  <div id="carouselExampleCaptions" class="carousel slide alert alert-dark form-control" data-bs-ride="carousel">
+  <div id="carouselExampleCaptions" class="carousel slide alert alert-dark form-control " data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
@@ -144,44 +146,222 @@
     </button>
   </div>
   <!-- carousel end -->
+  
+  <!-- signup start -->
+  <div class="d-none" id="ryde">
+     
+     <!-- first LOGO start  -->
+     <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+
+                <span><img class="img-fluid w-25" src="https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/logo-red.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <!-- first LOGO start  -->
+             <br><br><br>
+             <!-- heading start  -->
+         <div class=" container w-100">
+             <div class="row">
+                 <div class="col-sm-12 text-center">
+                     <h1 style="font-size: 50px;">Mechanical Element, Shaft ,Gears</h1>
+                     <h1 style="font-size: 50px;"> & Belt Drive Get Machine Design With US</h1>
+                 </div>
+             </div>
+            </div>
+            <!-- heading END  -->
+           <br><br><br><br>
+           <!-- TRIP TYPE start  -->
+        <div class="container text-center w-100">
+            <h5>SELECT TYPES OF ELEMENT</h5>
+            <br><br>
+            <div class="row" style="justify-content: space-around;">
+
+                <div class="col-sm-4" onclick="Gear()"> 
+                    <div class="card">
+                      <div class="card-body w-100  gap-2">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <h6>GEARS</h6>
+                            <p> Spure, Helical, Beveal</p>
+                          </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-sm-12 ">
+                                <img class="img-fluid " src="https://th.bing.com/th/id/OIP.vzgksOp6d7ZgxXMMVwA3KQHaDt?pid=ImgDet&rs=1" alt="">
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                <div class="col-sm-4"> 
+                    <div class="card">
+                      <div class="card-body w-100 gap-2">
+                            <div class="row">
+                            <div class="col-sm-12">
+                                <h6>BELT DRAIVE</h6>
+                               <p>simpal, V-type, flat</p>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-12 ">
+                                <img class="img-fluid " src="https://th.bing.com/th/id/OIP.vzgksOp6d7ZgxXMMVwA3KQHaDt?pid=ImgDet&rs=1" alt="">
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                <div class="col-sm-4"> 
+                    <div class="card">
+                      <div class="card-body w-100 gap-2">
+                            <div class="row ">
+                            <div class="col-sm-12">
+                                <h6>BEARINGS</h6>
+                               <p>loading contact,static,  Dynamic </p>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-12 ">
+                                <img class="img-fluid " src="https://th.bing.com/th/id/OIP.vzgksOp6d7ZgxXMMVwA3KQHaDt?pid=ImgDet&rs=1" alt="">
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+            
+
+            </div>
+        <!-- TRIP TYPE END  -->
+      <br><br><br>
+      <!-- Offers start  -->
+        <div class="container gap-2">
+              <br><br>
+            <div class="d-none row" style="justify-content: space-around;" id="gears">
+                <div class="col-sm-2" onclick="signup()">
+                    <div class="card" style="background-color: rgb(13, 186, 230);">
+                        <div class="card-body text-light ">
+                            <h1 style="font-weight: bold;">SPURE GEAR</h1>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card" style="background-color: rgb(212, 117, 83);">
+                        <div class="card-body text-light ">
+                            <h1 style="font-weight: bold;">HELICAL GEAR</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card" style="background-color: rgb(173, 38, 173);">
+                        <div class="card-body text-light ">
+                            <h1 style="font-weight: bold;">BEVEL GEAR</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+                
+            </div>
+        </div>
+        <!-- Offers END  -->
+        <br><br><br>
+        <!-- Vehicles you can book start  -->
+        <div class="container" id="extra">
+            <h3>Vehicles you can book</h3>
+            <div class="row">
+                <div class="col-sm-3 ">
+                    <div class="card alert alert-warning">
+                      <div class="card-body">
+                        <h5>Hatchbacks and Sedans</h5>
+                        <p>Ideal for about 2-4 people</p>
+                        <br><br><br>
+                        <span><img class="img-fluid" src="https://th.bing.com/th/id/OIP.WDiYk6pWfTIvzjWcEtJ8FQHaFj?pid=ImgDet&rs=1" alt=""></span>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 ">
+                    <div class="card alert alert-warning">
+                      <div class="card-body">
+                        <h5>Hatchbacks and Sedans</h5>
+                        <p>Ideal for about 2-4 people</p>
+                        <br><br><br>
+                        <span><img class="img-fluid" src="https://th.bing.com/th/id/OIP.WDiYk6pWfTIvzjWcEtJ8FQHaFj?pid=ImgDet&rs=1" alt=""></span>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 ">
+                    <div class="card alert alert-warning">
+                      <div class="card-body">
+                        <h5>Hatchbacks and Sedans</h5>
+                        <p>Ideal for about 2-4 people</p>
+                        <br><br><br>
+                        <span><img class="img-fluid" src="https://th.bing.com/th/id/OIP.WDiYk6pWfTIvzjWcEtJ8FQHaFj?pid=ImgDet&rs=1" alt=""></span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="card alert alert-warning">
+                      <div class="card-body">
+                        <h5>Hatchbacks and Sedans</h5>
+                        <p>Ideal for about 2-4 people</p>
+                        <br><br><br>
+                        <span><img class="img-fluid" src="https://th.bing.com/th/id/OIP.WDiYk6pWfTIvzjWcEtJ8FQHaFj?pid=ImgDet&rs=1" alt=""></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <!-- Vehicles you can book END  -->
+   </div>
+  <!-- signup END -->
 
 <!-- Design start -->
-<div class="container text-center form-control d-none " id="login" >
+<div class="container text-center form-control d-none" id="login" >
   <h4>put out application based information</h4>
   <div class="container">
   <div class="row justify-content-around text-center" id="design">
-    <div class="col-sm-2  form-control  " >
+    <div class="col-sm-2 jpj  form-control  " >
       <p>maximum power of transmition (in waat) </p>
       <div class="d-flex  form-control">
         <input type="number" id="power">k.Waat
       </div>
     </div>
 
-      <div class="col-sm-2  form-control  " >
+      <div class="col-sm-2 jpj  form-control  " >
       <p>maximum speed of gear during trasmition (in RPM)</p>
     <div class="d-flex  form-control">
       <input type="number" id="RPM">RPM
     </div>  
   </div>
 
-  <div class="col-sm-2  form-control  " >
+  <div class="col-sm-2 jpj  form-control  " >
     <p>Enter serves factor (SV)</p>
   <div class="d-flex  form-control">
     <input type="number" id="sarvesf">
   </div>  
 </div>
 
-<div class="col-sm-2  form-control  " >
+<div class="col-sm-2 jpj  form-control  " >
   <p>Enter factor of Safty (FOS)</p>
 <div class="d-flex  form-control">
   <input type="number" id="FOS">
 </div>  
 </div>
 
-    <div class="col-sm-2 form-control  " >
+    <div class="col-sm-2 jpj form-control  " >
       <p> Maximum Stress on Gear</p>
       <div class="d-flex form-control">
-        <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
+        <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2 jpj</sup>
         <select class="form-select " id="material">
           <option selected>ultimet tensil stress (ult)</option>
           <option value="1">parmisibal Bending Stress (ben)</option>
@@ -189,26 +369,26 @@
       </div>
     </div>
    
-    <div class="col-sm-2 form-control  " >
+    <div class="col-sm-2 jpj form-control  " >
       <p>Involut Profial of Your Gear</p>
       <select class="form-select " id="involut">
         <option selected>14.5 Fulldepth</option>
         <option value="1">20 Full depth</option>
-        <option value="2">20  Stub Involut</option>
+        <option value="2 jpj">20  Stub Involut</option>
       </select>
     </div>
 
   </div>
 
   <div class="row justify-content-around text-center " id="design">
-    <div class="col-sm-3  form-control  " >
+    <div class="col-sm-3 ansrow  form-control  " >
       <p>number of teeth of pinion </p>
     <div class="d-flex  form-control">
       <input type="number" id="pteeth">
     </div>  
   </div>
   
-  <div class="col-sm-3  form-control  " >
+  <div class="col-sm-3 ansrow  form-control  " >
     <p>number of teeth of gear </p>
     <div class="d-flex  form-control">
       <input type="number" id="gteeth">
@@ -216,7 +396,7 @@
     </div>  
   </div>
 
-  <div class="col-sm-3  form-control  " >
+  <div class="col-sm-3 ansrow  form-control  " >
     <p>modulus </p>
     <div class="d-flex  form-control">
       <input type="number" id="modul">mm
@@ -224,7 +404,7 @@
     </div>  
   </div>
 
-  <div class="col-sm-3  form-control  " >
+  <div class="col-sm-3 ansrow  form-control  " >
     <p>Diametral pitch </p>
     <div class="d-flex  form-control">
       <input type="number" id="dp">mm
@@ -239,27 +419,27 @@
    
 <div class="container text-center form-control d-none" id="ans">
   <div class="row" id="arow">
-    <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
       <h6>Torque is  </h6>
       <h6 id="torque">  </h6>
     </div>
-    <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
      <h6> tagential force is </h6>
      <h6 id="ptangent"></h6>
     </div>
-    <div class="col-sm-2 form-control d-flex gap-3"id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex gap-3"id="tcol">
      <h6> velocity(m/sec) </h6>
      <h6 id="velocity"></h6>
     </div>
-    <div class="col-sm-2 form-control d-flex  gap-3"id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
      <h6> velocity factor </h6>
      <h6 id="CV"></h6>
     </div>
-    <div class="col-sm-2 form-control d-flex  gap-3"id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
      <h6>Effective Lode </h6>
      <h6 id="peffect"></h6>
     </div>
-    <div class="col-sm-2 form-control d-flex  gap-3"id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
      <h6>Lewis form factor </h6>
      <h6 id="lewis"></h6>
     </div>
@@ -267,22 +447,22 @@
 
 
    <div class="row" id="arow">
-    <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+    <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
       <h6>width of Gear  </h6>
       <h6 id="width"> </h6>
     </div>
     
-     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+     <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
        <h6>Beam Strength of Gear  </h6>
        <h6 id="bstrengh"> </h6>
      </div>
 
-     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+     <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
        <h6>Wear Stength of Gear </h6>
        <h6 id="wstrengh"> </h6>
      </div>
 
-     <div class="col-sm-2 form-control d-flex gap-3" id="tcol">
+     <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
        <h6> Suitable Hardness of Gear (BHN) </h6>
        <h6 id="BHN"> </h6>
      </div>

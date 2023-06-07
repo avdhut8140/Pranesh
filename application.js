@@ -1,29 +1,55 @@
 // const P= document.getElementById("power").value
 // const N=document.getElementById("RPM").value
 // const T=document.getElementById("torque").value...
-let condition1= true
+
+let condition4= true
 function login(){
+       
+    if (condition4) {
+        document.getElementById("ryde").classList.remove("d-none")
+        document.getElementById("carouselExampleCaptions").classList.add("d-none")
+        condition4 = false
+        
+      } else {
+        document.getElementById("ryde").classList.add("d-none")
+          document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+          condition4 = true
+    }
+}
+
+let condition1= true
+function signup(){
        
     if (condition1) {
         document.getElementById("login").classList.remove("d-none")
-        document.getElementById("carouselExampleCaptions").classList.add("d-none")
+        document.getElementById("extra").classList.add("d-none")
         condition1 = false
         
       } else {
         document.getElementById("login").classList.add("d-none")
-          document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+          document.getElementById("extra").classList.remove("d-none")
           condition1 = true
     }
 }
+
+let condition3= true
+function Gear(){
+       
+    if (condition3) {
+        document.getElementById("gears").classList.remove("d-none")
+        condition3 = false
+        
+      } else {
+        document.getElementById("gears").classList.add("d-none")
+          condition3 = true
+    }
+}
+
+
 const O=60 *1000/6.28
 let X=""
 let velocity =""
-
-
-
 let condition2= true
-
-
 function data() {
     
 
@@ -149,8 +175,6 @@ console.log("root1=",root1);
 console.log("BHN=",BHN);
 var BHN= root1
 document.querySelector("#BHN").innerHTML=BHN
-
-
 
 }
 
