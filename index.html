@@ -196,7 +196,7 @@
                       </div>
                     </div>
 
-                <div class="col-sm-4"> 
+                <div class="col-sm-4 " id="belt"> 
                     <div class="card">
                       <div class="card-body w-100 gap-2">
                             <div class="row">
@@ -214,7 +214,7 @@
                       </div>
                     </div>
 
-                <div class="col-sm-4"> 
+                <div class="col-sm-4" id="bearings"> 
                     <div class="card">
                       <div class="card-body w-100 gap-2">
                             <div class="row ">
@@ -232,17 +232,173 @@
                       </div>
                     </div>
 
+                  </div>
                 </div>
 
             
+                <br><br><br>
 
+     
+         <div class="container  d-none"id="gears">
+
+          <br><br><br>
+        
+          <!-- Design start -->
+          <div class="container text-center form-control d-none" id="login" >
+            <h4>put out application based information</h4>
+            <div class="container">
+            <div class="row justify-content-around text-center" id="design">
+              <div class="col-sm-2 jpj  form-control  " >
+                <p>maximum power of transmition (in waat) </p>
+                <div class="d-flex  form-control">
+                  <input type="number" id="power">k.Waat
+                </div>
+              </div>
+          
+                <div class="col-sm-2 jpj  form-control  " >
+                <p>maximum speed of gear during trasmition (in RPM)</p>
+              <div class="d-flex  form-control">
+                <input type="number" id="RPM">RPM
+              </div>  
             </div>
-        <!-- TRIP TYPE END  -->
-      <br><br><br>
-      <!-- Offers start  -->
-        <div class="container gap-2">
+          
+            <div class="col-sm-2 jpj  form-control  " >
+              <p>Enter serves factor (SV)</p>
+            <div class="d-flex  form-control">
+              <input type="number" id="sarvesf">
+            </div>  
+          </div>
+          
+          <div class="col-sm-2 jpj  form-control  " >
+            <p>Enter factor of Safty (FOS)</p>
+          <div class="d-flex  form-control">
+            <input type="number" id="FOS">
+          </div>  
+          </div>
+          
+              <div class="col-sm-2 jpj form-control  " >
+                <p> Maximum Stress on Gear</p>
+                <div class="d-flex form-control">
+                  <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
+                  <select class="form-select " id="material">
+                    <option selected>ultimet tensil stress (ult)</option>
+                    <option value="1">parmisibal Bending Stress (ben)</option>
+                  </select>
+                </div>
+              </div>
+             
+              <div class="col-sm-2 jpj form-control  " >
+                <p>Involut Profial of Your Gear</p>
+                <select class="form-select " id="involut">
+                  <option selected>14.5 Fulldepth</option>
+                  <option value="1">20 Full depth</option>
+                  <option value="2 jpj">20  Stub Involut</option>
+                </select>
+              </div>
+          
+            </div>
+          
+            <div class="row justify-content-around text-center " id="design">
+              <div class="col-sm-3 ansrow  form-control  " >
+                <p>number of teeth of pinion </p>
+              <div class="d-flex  form-control">
+                <input type="number" id="pteeth">
+              </div>  
+            </div>
+            
+            <div class="col-sm-3 ansrow  form-control  " >
+              <p>number of teeth of gear </p>
+              <div class="d-flex  form-control">
+                <input type="number" id="gteeth">
+                
+              </div>  
+            </div>
+          
+            <div class="col-sm-3 ansrow  form-control  " >
+              <p>modulus </p>
+              <div class="d-flex  form-control">
+                <input type="number" id="modul">mm
+                
+              </div>  
+            </div>
+          
+            <div class="col-sm-3 ansrow  form-control  " >
+              <p>Diametral pitch </p>
+              <div class="d-flex  form-control">
+                <input type="number" id="dp">mm
+                
+              </div>  
+            </div>
+          
+          </div>
+          </div>
+          
+          
+             
+          <div class="container text-center form-control d-none" id="ans">
+            <div class="row" id="arow">
+              <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
+                <h6>Torque is  </h6>
+                <h6 id="torque">  </h6>
+              </div>
+              <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
+               <h6> tagential force is </h6>
+               <h6 id="ptangent"></h6>
+              </div>
+              <div class="col-sm-2 jpj form-control d-flex gap-3"id="tcol">
+               <h6> velocity(m/sec) </h6>
+               <h6 id="velocity"></h6>
+              </div>
+              <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
+               <h6> velocity factor </h6>
+               <h6 id="CV"></h6>
+              </div>
+              <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
+               <h6>Effective Lode </h6>
+               <h6 id="peffect"></h6>
+              </div>
+              <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
+               <h6>Lewis form factor </h6>
+               <h6 id="lewis"></h6>
+              </div>
+            </div>
+          
+          
+             <div class="row" id="arow">
+              <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
+                <h6>width of Gear  </h6>
+                <h6 id="width"> </h6>
+              </div>
+              
+               <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
+                 <h6>Beam Strength of Gear  </h6>
+                 <h6 id="bstrengh"> </h6>
+               </div>
+          
+               <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
+                 <h6>Wear Stength of Gear </h6>
+                 <h6 id="wstrengh"> </h6>
+               </div>
+          
+               <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
+                 <h6> Suitable Hardness of Gear (BHN) </h6>
+                 <h6 id="BHN"> </h6>
+               </div>
+          
+              
+             </div>
+          </div>
+          
+          
+            <button type="button"onclick="data()" id="btn" class="btn  w-100">GET</button>
+          </div>
+          <!-- Design end -->
+          
+
+
+        <div class="container gap-2  " >
               <br><br>
-            <div class="d-none row" style="justify-content: space-around;" id="gears">
+            <div class="row" style="justify-content: space-around;" >
                 <div class="col-sm-2" onclick="signup()">
                     <div class="card" style="background-color: rgb(13, 186, 230);">
                         <div class="card-body text-light ">
@@ -271,8 +427,13 @@
                 
             </div>
         </div>
-        <!-- Offers END  -->
+
+        
+        </div>
+        <!-- Gears And Sub Gears  -->
+        
         <br><br><br>
+        
         <!-- Vehicles you can book start  -->
         <div class="container" id="extra">
             <h3>Vehicles you can book</h3>
@@ -324,159 +485,6 @@
        <!-- Vehicles you can book END  -->
    </div>
   <!-- signup END -->
-
-<!-- Design start -->
-<div class="container text-center form-control d-none" id="login" >
-  <h4>put out application based information</h4>
-  <div class="container">
-  <div class="row justify-content-around text-center" id="design">
-    <div class="col-sm-2 jpj  form-control  " >
-      <p>maximum power of transmition (in waat) </p>
-      <div class="d-flex  form-control">
-        <input type="number" id="power">k.Waat
-      </div>
-    </div>
-
-      <div class="col-sm-2 jpj  form-control  " >
-      <p>maximum speed of gear during trasmition (in RPM)</p>
-    <div class="d-flex  form-control">
-      <input type="number" id="RPM">RPM
-    </div>  
-  </div>
-
-  <div class="col-sm-2 jpj  form-control  " >
-    <p>Enter serves factor (SV)</p>
-  <div class="d-flex  form-control">
-    <input type="number" id="sarvesf">
-  </div>  
-</div>
-
-<div class="col-sm-2 jpj  form-control  " >
-  <p>Enter factor of Safty (FOS)</p>
-<div class="d-flex  form-control">
-  <input type="number" id="FOS">
-</div>  
-</div>
-
-    <div class="col-sm-2 jpj form-control  " >
-      <p> Maximum Stress on Gear</p>
-      <div class="d-flex form-control">
-        <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2 jpj</sup>
-        <select class="form-select " id="material">
-          <option selected>ultimet tensil stress (ult)</option>
-          <option value="1">parmisibal Bending Stress (ben)</option>
-        </select>
-      </div>
-    </div>
-   
-    <div class="col-sm-2 jpj form-control  " >
-      <p>Involut Profial of Your Gear</p>
-      <select class="form-select " id="involut">
-        <option selected>14.5 Fulldepth</option>
-        <option value="1">20 Full depth</option>
-        <option value="2 jpj">20  Stub Involut</option>
-      </select>
-    </div>
-
-  </div>
-
-  <div class="row justify-content-around text-center " id="design">
-    <div class="col-sm-3 ansrow  form-control  " >
-      <p>number of teeth of pinion </p>
-    <div class="d-flex  form-control">
-      <input type="number" id="pteeth">
-    </div>  
-  </div>
-  
-  <div class="col-sm-3 ansrow  form-control  " >
-    <p>number of teeth of gear </p>
-    <div class="d-flex  form-control">
-      <input type="number" id="gteeth">
-      
-    </div>  
-  </div>
-
-  <div class="col-sm-3 ansrow  form-control  " >
-    <p>modulus </p>
-    <div class="d-flex  form-control">
-      <input type="number" id="modul">mm
-      
-    </div>  
-  </div>
-
-  <div class="col-sm-3 ansrow  form-control  " >
-    <p>Diametral pitch </p>
-    <div class="d-flex  form-control">
-      <input type="number" id="dp">mm
-      
-    </div>  
-  </div>
-
-</div>
-</div>
-
-
-   
-<div class="container text-center form-control d-none" id="ans">
-  <div class="row" id="arow">
-    <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
-      <h6>Torque is  </h6>
-      <h6 id="torque">  </h6>
-    </div>
-    <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
-     <h6> tagential force is </h6>
-     <h6 id="ptangent"></h6>
-    </div>
-    <div class="col-sm-2 jpj form-control d-flex gap-3"id="tcol">
-     <h6> velocity(m/sec) </h6>
-     <h6 id="velocity"></h6>
-    </div>
-    <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
-     <h6> velocity factor </h6>
-     <h6 id="CV"></h6>
-    </div>
-    <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
-     <h6>Effective Lode </h6>
-     <h6 id="peffect"></h6>
-    </div>
-    <div class="col-sm-2 jpj form-control d-flex  gap-3"id="tcol">
-     <h6>Lewis form factor </h6>
-     <h6 id="lewis"></h6>
-    </div>
-  </div>
-
-
-   <div class="row" id="arow">
-    <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
-      <h6>width of Gear  </h6>
-      <h6 id="width"> </h6>
-    </div>
-    
-     <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
-       <h6>Beam Strength of Gear  </h6>
-       <h6 id="bstrengh"> </h6>
-     </div>
-
-     <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
-       <h6>Wear Stength of Gear </h6>
-       <h6 id="wstrengh"> </h6>
-     </div>
-
-     <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
-       <h6> Suitable Hardness of Gear (BHN) </h6>
-       <h6 id="BHN"> </h6>
-     </div>
-
-    
-   </div>
-</div>
-
-
-  <button type="button"onclick="data()" id="btn" class="btn  w-100">GET</button>
-</div>
-
- 
-<!-- Design end -->
 
 
 

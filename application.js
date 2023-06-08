@@ -22,25 +22,28 @@ function signup(){
        
     if (condition1) {
         document.getElementById("login").classList.remove("d-none")
-        document.getElementById("extra").classList.add("d-none")
         condition1 = false
         
       } else {
         document.getElementById("login").classList.add("d-none")
-          document.getElementById("extra").classList.remove("d-none")
           condition1 = true
     }
 }
 
 let condition3= true
 function Gear(){
-       
     if (condition3) {
+        document.getElementById("bearings").classList.add("d-none")
+        document.getElementById("belt").classList.add("d-none")
         document.getElementById("gears").classList.remove("d-none")
+        document.getElementById("extra").classList.add("d-none")
         condition3 = false
         
       } else {
         document.getElementById("gears").classList.add("d-none")
+        document.getElementById("bearings").classList.remove("d-none")
+        document.getElementById("belt").classList.remove("d-none")
+        document.getElementById("extra").classList.remove("d-none")
           condition3 = true
     }
 }
