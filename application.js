@@ -30,18 +30,17 @@ function saport(){
 //           condition4 = true
 //     }
 // }
+function back(){
 
-let condition1= true
+    document.getElementById("login").classList.add("d-none")
+    document.getElementById("ryde").classList.remove("d-none")
+   
+}
+
 function signup(){
-       
-    if (condition1) {
-        document.getElementById("login").classList.remove("d-none")
-        condition1 = false
-        
-      } else {
-        document.getElementById("login").classList.add("d-none")
-          condition1 = true
-    }
+    document.getElementById("login").classList.remove("d-none")
+    document.getElementById("ryde").classList.add("d-none")
+   
 }
 
 let condition3= true

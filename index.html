@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
+      
+      #backdiv{
+        background-color:cyan ;
+      }
       #zwindo{
         size: 10px;
       }
-    #extra{ margin-bottom: 10vh;
+    #extra{ margin-top: 10vh;
        
       }
       .nnn{
@@ -29,7 +33,7 @@
           background-color:coral;
         }
         .carousel {
-            margin-top: 6vh;
+            margin-top: 10vh;
            
         }
         .d-flex{
@@ -56,7 +60,7 @@
           justify-content: space-between;
         }
         #login{
-         
+         margin-bottom: 6vh;
           background-color: cyan;
          
         }
@@ -70,7 +74,7 @@
           border-radius: 50px;
         }
         #ryde{
-          margin-bottom: 10vh;
+          margin-top: 10vh;
         }
          
 
@@ -79,7 +83,7 @@
   </head>
   <body>
      <!-- navbar start -->
- <nav class="navbar  navbar-expand-sm  bg-dark fixed-bottom" >
+ <nav class="navbar  navbar-expand-sm  bg-dark fixed-top" >
   <button class="  text-danger btn btn-outline-dark  " style="border: 0px;" id="zwindo">Z <sup class="text-warning" style="font-weight: bold;"> windo</sup> </button>
       <button type="button" class="btn btn-warning">Geometry</button>
                 <button type="button" class="btn btn-warning" onclick="saport()">Saport</button>
@@ -375,11 +379,58 @@
             
          <div class="container  d-none"id="gears">
 
-          <br><br><br>
+          <br>
         
+
+
+        <div class="container gap-2  w-75 " >
+              <br><br>
+            <div class="row" style="justify-content: space-around text-center;" >
+                <div class="col-sm-4" onclick="signup()"><sup class="text-success" style="font-weight: bold;">ACTIVE</sup>
+                    <div class="card" style="background-color: rgb(13, 186, 230);">
+                        <div class="card-body text-light ">
+                            <h6 style="font-weight: bold;">SPURE GEAR</h6>
+                            <img class="img-fluid w-75"id="elementsub" src="k.kumar//spure gear.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
+                    <div class="card" style="background-color: rgb(212, 117, 83);">
+                        <div class="card-body text-light ">
+                            <h6 style="font-weight: bold;">HELICAL GEAR</h6>
+                            <img class="img-fluid w-75"id="elementsub" src="k.kumar//helical.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
+                    <div class="card" style="background-color: rgb(173, 38, 173);">
+                        <div class="card-body text-light ">
+                            <h6 style="font-weight: bold;">BEVEL GEAR</h6>
+                            <img class="img-fluid w-75" id="elementsub" src="k.kumar//bevel.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"></div>
+                
+            </div>
+        </div>
+
+        
+        </div>
+        <!-- Gears And Sub Gears  -->
+   </div>
+  <!-- signup END -->
+
+  
           <!-- Design start -->
           <div class="container text-center form-control d-none " id="login" >
-            <h4>put out application based information</h4>
+            <div class="d-flex text-center" style="justify-content: space-between;" id="backdiv">
+              <h4 class="w-100">put out application based information</h4>
+              <button type="button" class="btn btn-secondary fixed-bottom" onclick="back()">Back</button>
+            </div>
             <div class="container">
             <div class="row justify-content-around text-center" id="design">
               <div class="col-sm-2 jpj  form-control  " >
@@ -527,49 +578,25 @@
             <button type="button"onclick="data()" id="btn" class="btn  w-100">GET</button>
           </div>
           <!-- Design end -->
-          
+           
 
-
-        <div class="container gap-2  w-75 " >
-              <br><br>
-            <div class="row" style="justify-content: space-around text-center;" >
-                <div class="col-sm-4" onclick="signup()"><sup class="text-success" style="font-weight: bold;">ACTIVE</sup>
-                    <div class="card" style="background-color: rgb(13, 186, 230);">
-                        <div class="card-body text-light ">
-                            <h6 style="font-weight: bold;">SPURE GEAR</h6>
-                            <img class="img-fluid w-75"id="elementsub" src="k.kumar//spure gear.jpg" alt="">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
-                    <div class="card" style="background-color: rgb(212, 117, 83);">
-                        <div class="card-body text-light ">
-                            <h6 style="font-weight: bold;">HELICAL GEAR</h6>
-                            <img class="img-fluid w-75"id="elementsub" src="k.kumar//helical.jpeg" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
-                    <div class="card" style="background-color: rgb(173, 38, 173);">
-                        <div class="card-body text-light ">
-                            <h6 style="font-weight: bold;">BEVEL GEAR</h6>
-                            <img class="img-fluid w-75" id="elementsub" src="k.kumar//bevel.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3"></div>
-                
-            </div>
-        </div>
-
+          <!-- storage start
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">header</div>
+        <div class="card-body">body</div>
         
-        </div>
-        <!-- Gears And Sub Gears  -->
-   </div>
-  <!-- signup END -->
+      </div>
+    </div>
+  </div>
+</div> -->
+
+          <!-- storage End -->
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
         integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
