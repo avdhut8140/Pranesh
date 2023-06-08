@@ -8,11 +8,13 @@ function login(){
     if (condition4) {
         document.getElementById("ryde").classList.remove("d-none")
         document.getElementById("carouselExampleCaptions").classList.add("d-none")
+        document.getElementById("extra").classList.add("d-none")
         condition4 = false
         
       } else {
         document.getElementById("ryde").classList.add("d-none")
           document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+          document.getElementById("extra").classList.remove("d-none")
           condition4 = true
     }
 }
@@ -36,14 +38,12 @@ function Gear(){
         document.getElementById("bearings").classList.add("d-none")
         document.getElementById("belt").classList.add("d-none")
         document.getElementById("gears").classList.remove("d-none")
-        document.getElementById("extra").classList.add("d-none")
         condition3 = false
         
       } else {
         document.getElementById("gears").classList.add("d-none")
         document.getElementById("bearings").classList.remove("d-none")
         document.getElementById("belt").classList.remove("d-none")
-        document.getElementById("extra").classList.remove("d-none")
           condition3 = true
     }
 }
