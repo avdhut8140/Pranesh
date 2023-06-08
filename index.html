@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
+      #zwindo{
+        size: 10px;
+      }
     #extra{ margin-bottom: 10vh;
        
       }
@@ -77,20 +80,13 @@
   <body>
      <!-- navbar start -->
  <nav class="navbar  navbar-expand-sm  bg-dark fixed-bottom" >
-       
-            
-
-                <button class="navbar-brand text-bg-dark text-light " style="border: 0px;" type="button"  href="#">BHATIYA<sup class="text-warning" style="font-weight: bold;">by Avdhut</sup></button>
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" onclick="login()" class="btn btn-outline-light gap-3" data-bs-toggle="collapse"
+  <button class="  text-danger btn btn-outline-dark  " style="border: 0px;" id="zwindo">Z <sup class="text-warning" style="font-weight: bold;"> windo</sup> </button>
+      <button type="button" class="btn btn-warning">Geometry</button>
+                <button type="button" class="btn btn-warning" onclick="saport()">Saport</button>
+                <button type="button" onclick="login()" class="btn btn-outline-warning gap-3" data-bs-toggle="collapse"
                 data-bs-target="#">Design</button>
-       
-                    
-    
     </nav>
     <!-- navbar end -->
-
 
 
      <!-- carousel start -->
@@ -256,7 +252,7 @@
   <!-- carousel end -->
 
   <!-- Vehicles you can book start  -->
-  <div class="container " id="extra"><div class="row">
+  <div class="container d-none " id="extra"><div class="row">
         <div class="col-sm-6 ">
             <div class="card ">
               <div class="card-body text-center kkk">
@@ -288,7 +284,7 @@
 <!-- Vehicles you can book END  -->
 
   <!-- signup start -->
-  <div class="d-none" id="ryde">
+  <div class="" id="ryde">
      
      <!-- first LOGO start  -->
      <div class="container" style="margin-top: 100px;">
@@ -305,8 +301,8 @@
          <div class=" container w-100">
              <div class="row">
                  <div class="col-sm-12 text-center">
-                     <h5 style="font-size: 50px;">Mechanical Element, Shaft ,Gears</h5>
-                     <h5 style="font-size: 50px;"> & Belt Drive Get Machine Design With US</h5>
+                     <h6 style="font-size: 20px;">Mechanical Element, Shaft ,Gears</h6>
+                     <h6 style="font-size: 20px;"> & Belt Drive Get Machine Design With US</h6>
                  </div>
              </div>
             </div>
@@ -536,8 +532,8 @@
 
         <div class="container gap-2  w-75 " >
               <br><br>
-            <div class="row" style="justify-content: space-around;" >
-                <div class="col-sm-2" onclick="signup()"><sup class="text-success" style="font-weight: bold;">ACTIVE</sup>
+            <div class="row" style="justify-content: space-around text-center;" >
+                <div class="col-sm-4" onclick="signup()"><sup class="text-success" style="font-weight: bold;">ACTIVE</sup>
                     <div class="card" style="background-color: rgb(13, 186, 230);">
                         <div class="card-body text-light ">
                             <h6 style="font-weight: bold;">SPURE GEAR</h6>
@@ -547,7 +543,7 @@
 
                 </div>
 
-                <div class="col-sm-2"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
+                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
                     <div class="card" style="background-color: rgb(212, 117, 83);">
                         <div class="card-body text-light ">
                             <h6 style="font-weight: bold;">HELICAL GEAR</h6>
@@ -556,7 +552,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
+                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
                     <div class="card" style="background-color: rgb(173, 38, 173);">
                         <div class="card-body text-light ">
                             <h6 style="font-weight: bold;">BEVEL GEAR</h6>
@@ -577,10 +573,13 @@
 
 
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    
   <script src="application.js"></script>
   </body>
 </html>

@@ -1,23 +1,35 @@
 // const P= document.getElementById("power").value
 // const N=document.getElementById("RPM").value
 // const T=document.getElementById("torque").value...
-
-let condition4= true
-function login(){
-       
-    if (condition4) {
-        document.getElementById("ryde").classList.remove("d-none")
-        document.getElementById("carouselExampleCaptions").classList.add("d-none")
-        document.getElementById("extra").classList.add("d-none")
-        condition4 = false
+let condition5= true
+function saport(){
+    if (condition5) {
+        
+        document.getElementById("extra").classList.remove("d-none")
+        condition5 = false
         
       } else {
-        document.getElementById("ryde").classList.add("d-none")
-          document.getElementById("carouselExampleCaptions").classList.remove("d-none")
-          document.getElementById("extra").classList.remove("d-none")
-          condition4 = true
+          document.getElementById("extra").classList.add("d-none")
+          condition5 = true
     }
 }
+
+// let condition4= true
+// function login(){
+       
+//     if (condition4) {
+//         document.getElementById("ryde").classList.remove("d-none")
+//         document.getElementById("carouselExampleCaptions").classList.add("d-none")
+      
+//         condition4 = false
+        
+//       } else {
+//         document.getElementById("ryde").classList.add("d-none")
+//           document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+
+//           condition4 = true
+//     }
+// }
 
 let condition1= true
 function signup(){
