@@ -14,22 +14,6 @@ function saport(){
     }
 }
 
-// let condition4= true
-// function login(){
-       
-//     if (condition4) {
-//         document.getElementById("ryde").classList.remove("d-none")
-//         document.getElementById("carouselExampleCaptions").classList.add("d-none")
-      
-//         condition4 = false
-        
-//       } else {
-//         document.getElementById("ryde").classList.add("d-none")
-//           document.getElementById("carouselExampleCaptions").classList.remove("d-none")
-
-//           condition4 = true
-//     }
-// }
 function back(){
 
     document.getElementById("login").classList.add("d-none")
@@ -48,6 +32,7 @@ function back1(){
     document.getElementById("belt").classList.remove("d-none")
     document.getElementById("gears").classList.remove("d-none")
     document.getElementById("titel").classList.remove("d-none")
+    document.getElementById("carouselExampleCaptions").classList.remove("d-none")
     document.getElementById("subgears").classList.add("d-none")
     
 }
@@ -57,6 +42,7 @@ function Gear(){
         document.getElementById("belt").classList.add("d-none")
         document.getElementById("gears").classList.add("d-none")
         document.getElementById("titel").classList.add("d-none")
+        document.getElementById("carouselExampleCaptions").classList.add("d-none")
         document.getElementById("subgears").classList.remove("d-none")
       
         
@@ -67,28 +53,36 @@ function Gear(){
 const O=60 *1000/6.28
 let X=""
 let velocity =""
+let F = ""
 let condition2= true
+
+var BHN =""
+var gteeth = parseFloat(document.querySelector("#gteeth").value)
+var pteeth = parseFloat(document.querySelector("#pteeth").value)
+const sigma = document.querySelector("#stress").value
+const material = document.querySelector("#material").value
+const torque = document.querySelector("#torque")
+const RPM=document.querySelector("#RPM").value 
+const power = document.querySelector("#power").value
+const dp=document.querySelector("#dp").value
+const Modul1 =document.querySelector("#modul").value
+const SV =document.querySelector("#sarvesf").value
+const FOS =document.querySelector("#FOS").value
+const involut =document.querySelector("#involut").value
+
+let T =""
+let CV=""
+let Y=""
+let width =""
+let peffect=""
+let bstrengh=""
+let wstrengh = ""
+
 function data() {
-    
-
-    const sigma = document.querySelector("#stress").value
-    const material = document.querySelector("#material").value
-    const torque = document.querySelector("#torque")
-    const RPM=document.querySelector("#RPM").value 
-    const power = document.querySelector("#power").value
-    var gteeth = parseFloat(document.querySelector("#gteeth").value)
-    var pteeth = parseFloat(document.querySelector("#pteeth").value)
-    const dp=document.querySelector("#dp").value
-    const Modul1 =document.querySelector("#modul").value
-    const SV =document.querySelector("#sarvesf").value
-    const FOS =document.querySelector("#FOS").value
-    const involut =document.querySelector("#involut").value
-    const in1="14.5 Fulldepth"
-    const in2="20 Full depth"
-    const M1="ultimet tensil stress (ult)"
-    const M2="parmisibal Bending Stress (ben)"
-    
-
+const in1="14.5 Fulldepth"
+const in2="20 Full depth"
+const M1="ultimet tensil stress (ult)"
+const M2="parmisibal Bending Stress (ben)"
 
     if (condition2) {
         document.getElementById("ans").classList.remove("d-none")
@@ -101,7 +95,8 @@ function data() {
 
 
 
-    let T= power*9554140.127/RPM
+    // let T =""
+     T= power*9554140.127/RPM
     console.log(T);
     torque.innerHTML=T
     let Modul=""
@@ -116,9 +111,9 @@ function data() {
     velocity=0.0000523598*Modul*pteeth*RPM
     document.querySelector("#velocity").innerHTML= velocity
   
-    let F = ""
+    // let F = ""
 F= 2*T/(Modul*pteeth)
- document.querySelector("#ptangent").innerHTML=F
+ document.querySelector("#ptangent").innerHTML= F
 
  if (velocity>20) {  
      
@@ -127,7 +122,7 @@ F= 2*T/(Modul*pteeth)
  } else {
     
  }
- let CV=""
+//  let CV=""
  if (velocity<10) {   
     CV=3/(3+velocity)
     
@@ -138,15 +133,16 @@ F= 2*T/(Modul*pteeth)
 
 document.querySelector("#CV").innerHTML= CV
 
-let peffect= SV*(F/CV)
+// let peffect=""
+ peffect= SV*(F/CV)
 document.querySelector("#peffect").innerHTML=  peffect
 console.warn(SV);
 console.error(peffect);
-let width =""
+// let width =""
 width=10*Modul
 document.querySelector("#width").innerHTML=width
 
-let Y=""
+// let Y=""
 console.log(involut);
 if (involut===in1 ) {
     Y=0.389-(2.148/pteeth)
@@ -164,12 +160,12 @@ if (material===M1) {
 }
   console.log(stress);
 
-let bstrengh=""
+// let bstrengh=""
 bstrengh=stress*width*Y*Modul
 document.querySelector("#bstrengh").innerHTML=bstrengh
 console.log(bstrengh);
 
-let wstrengh = ""
+// let wstrengh = ""
 wstrengh= FOS*peffect
 document.querySelector("#wstrengh").innerHTML=wstrengh
 
@@ -191,24 +187,128 @@ console.log("lob=",lob);
 var root1= Math.sqrt(lob)
 console.log("root1=",root1);
 console.log("BHN=",BHN);
-var BHN= root1
+// var BHN =""
+BHN = root1
 document.querySelector("#BHN").innerHTML=BHN
-
 }
 
 
-// function panik(){
+//stetment start
+function store(){
+    adddata("Torque is", T) ||
+    adddata("tagential force is", F)||                  
+    adddata("velocity(m/sec) ", velocity)||
+    adddata("velocity factor ", CV) ||
+    adddata("Effective Lode  ", peffect)|| 
+    adddata("Lewis form factor ", Y) ||
+    adddata(" width of Gear ", width) ||
+    adddata("Beam Strength of Gear  ", bstrengh)|| 
+    adddata("Wear Stength of Gear  ", wstrengh) ||
+    adddata("Suitable Hardness of Gear (BHN)", BHN) 
+}
+function show() {
+    getdata("Torque is","Torque is") ||
+    getdata("tagential force is","tagential force is")||                                
+    getdata("velocity(m/sec) ", "velocity(m/sec) ")||
+    getdata("velocity factor ","velocity factor") ||
+    getdata("Effective Lode  ", "Effective Lode ")|| 
+    getdata("Lewis form factor ","Lewis form factor") ||
+    getdata(" width of Gear "," width of Gear") ||
+    getdata("Beam Strength of Gear  ","Beam Strength of Gear ")|| 
+    getdata("Wear Stength of Gear  ","Wear Stength of Gear") ||
+    getdata("Suitable Hardness of Gear (BHN)","Suitable Hardness of Gear (BHN)") 
+
+   
+let condition4= true
+       
+    if (condition4) {
+        document.getElementById("storagecard").classList.remove("d-none")
+      
+        condition4 = false
+        
+      } else {
+        document.getElementById("storagecard").classList.add("d-none")
+             condition4 = true }
+}
+function remove() {
+    removedata("Torque is") ||
+    removedata("tagential force is")||                                
+    removedata("velocity(m/sec) ")||
+    removedata("velocity factor ") ||
+    removedata("Effective Lode  ")|| 
+    removedata("Lewis form factor ") ||
+    removedata(" width of Gear ") ||
+    removedata("Beam Strength of Gear  ")|| 
+    removedata("Wear Stength of Gear  ",) ||
+    removedata("Suitable Hardness of Gear (BHN)") 
+}
+const account = []
+
+function removedata(M) {
+    const y = {
+        from: M,
+        type: "remove"
+
+    }
+    account.unshift(y)
+
+    display()
+}
+function adddata(M,P) {
+    const y = {
+        from: M,
+        amount:  P,
+        type: "credit"
+
+    }
+    account.unshift(y)
+
+    display()
+}
+function getdata(D,R) {
+   
+           
+    const y = {
+        from: D,
+        amount: R,
+        type: "debit"
+
+    }
+    account.unshift(y)
+    display()
+
+
+}
+function display() {
+    const Statments = document.querySelector("#Statments")
+    console.log(account);
+
+    let str = ""
+    for (const item of account) {
+        if (item.type === "credit") {
+            localStorage.setItem(item.from, JSON.stringify(item.amount))
+           
+        }
+        if (item.type === "debit") {
+            
+            const data = localStorage.getItem(item.from)
+            console.log(JSON.parse(data))
+            str += `
+            <div class=" alert alert-success d-flex justify-content-between">
+               <p>${item.amount}</p>
+               <strong>${JSON.parse(data)}</strong>
+             </div>`
+         }
+         if (item.type === "remove") {
+            localStorage.removeItem(item.from)
+         } 
+    }
+    Statments.innerHTML = str
     
-//     document.querySelector("#stress").value            =""
-//      document.querySelector("#material").value=""
-//      document.querySelector("#torque")=""
-//     document.querySelector("#RPM").value=""
-//      document.querySelector("#power").value=""
-//      document.querySelector("#gteeth").value=""
-//      document.querySelector("#pteeth").value=""
-//     document.querySelector("#dp").value=""
-//     document.querySelector("#modul").value=""
-//     document.querySelector("#sarvesf").value=""
-//     document.querySelector("#FOS").value=""
-//     document.querySelector("#involut").value=""
-// }
+}
+//stetment end
+
+
+function store1(){
+    
+}

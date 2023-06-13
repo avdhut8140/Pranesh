@@ -61,6 +61,7 @@
         }
         #login{
          margin-bottom: 6vh;
+         margin-top: 6vh;
           background-color: cyan;
          
         }
@@ -85,7 +86,7 @@
      <!-- navbar start -->
  <nav class="navbar  navbar-expand-sm  bg-dark fixed-top" >
   <button class="  text-danger btn btn-outline-dark  " style="border: 0px;" id="zwindo">Z <sup class="text-warning" style="font-weight: bold;"> windo</sup> </button>
-      <button type="button" class="btn btn-warning">Geometry</button>
+      <button type="button" class="btn btn-warning"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >Geometry</button>
                 <button type="button" class="btn btn-warning" onclick="saport()">Saport</button>
                 <button type="button" onclick="login()" class="btn btn-outline-warning gap-3" data-bs-toggle="collapse"
                 data-bs-target="#">Design</button>
@@ -425,35 +426,35 @@
               <div class="col-sm-2 jpj  form-control  " >
                 <p>maximum power of transmition (in waat) </p>
                 <div class="d-flex  form-control">
-                  <input type="number" id="power">k.Waat
+                  <input type="number" value="12" id="power">k.Waat
                 </div>
               </div>
           
                 <div class="col-sm-2 jpj  form-control  " >
                 <p>maximum speed of gear during trasmition (in RPM)</p>
               <div class="d-flex  form-control">
-                <input type="number" id="RPM">RPM
+                <input type="number" value="1440" id="RPM">RPM
               </div>  
             </div>
           
             <div class="col-sm-2 jpj  form-control  " >
               <p>Enter serves factor (SV)</p>
             <div class="d-flex  form-control">
-              <input type="number" id="sarvesf">
+              <input type="number"  value="1.5" id="sarvesf">
             </div>  
           </div>
           
           <div class="col-sm-2 jpj  form-control  " >
             <p>Enter factor of Safty (FOS)</p>
           <div class="d-flex  form-control">
-            <input type="number" id="FOS">
+            <input type="number"  value="1.5" id="FOS">
           </div>  
           </div>
           
               <div class="col-sm-2 jpj form-control  " >
                 <p> Maximum Stress on Gear</p>
                 <div class="d-flex form-control">
-                  <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
+                  <input type="number" value="610" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
                   <select class="form-select " id="material">
                     <option selected>ultimet tensil stress (ult)</option>
                     <option value="1">parmisibal Bending Stress (ben)</option>
@@ -476,14 +477,14 @@
               <div class="col-sm-3 ansrow  form-control  " >
                 <p>number of teeth of pinion </p>
               <div class="d-flex  form-control">
-                <input type="number" id="pteeth">
+                <input type="number" value="18" id="pteeth">
               </div>  
             </div>
             
             <div class="col-sm-3 ansrow  form-control  " >
               <p>number of teeth of gear </p>
               <div class="d-flex  form-control">
-                <input type="number" id="gteeth">
+                <input type="number"  value="72" id="gteeth">
                 
               </div>  
             </div>
@@ -491,7 +492,7 @@
             <div class="col-sm-3 ansrow  form-control  " >
               <p>modulus </p>
               <div class="d-flex  form-control">
-                <input type="number" id="modul">mm
+                <input type="number" value="5" id="modul">mm
                 
               </div>  
             </div>
@@ -565,24 +566,43 @@
           
           
             <button type="button"onclick="data()" id="btn" class="btn  w-100">GET</button>
+            <button type="button"onclick="store()" id="btn" class="btn  w-100">SAVE</button>
           </div>
           <!-- Design end -->
            
+        <!-- storage display start --> 
+         <div class="offcanvas offcanvas-start"  id="offcanvasExample">
+           <div class="offcanvas-header">
+             <h5 class="offcanvas-title" id="offcanvasExampleLabel">stetmens</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+           </div>
+           <div class="offcanvas-body">
+             <div>
+               hear is your save data. you can rech it , used it . Like, text, images, lists, etc.
+             </div>
+             <div class="dropdown mt-3">
+               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                👇👇Your Action buttons👇👇👇
+               </button>
+               <ul class="dropdown-menu" >
+                 <li><a class="dropdown-item " href="#">Action</a></li>
+                 <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+               </ul>
+               <button type="button" class="btn btn-success" onclick="show()">GET Data</button>
+               <div class="card alert alert-info d-none" id="storagecard" >
+                 <div class="card-header alert alert-primary">Data of previous solution <button type="button" class="btn btn-warning" onclick="remove()">remove data</button></div>
+                 <div class="card-body "id="Statments"></div>
+             
+               </div></div>
+             </div>
+           </div>
+         
+       
+        <!-- storege  display End -->
 
-          <!-- storage start
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">header</div>
-        <div class="card-body">body</div>
-        
-      </div>
-    </div>
-  </div>
-</div> -->
 
-          <!-- storage End -->
+          
 
 
 
