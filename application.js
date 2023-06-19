@@ -84,7 +84,7 @@ let wstrengh = ""
 
 
 
-function  inputdata(){
+// function  inputdata(){
     // var gteeth = (document.querySelector("#gteeth").value)
     // var pteeth = (document.querySelector("#pteeth").value)
     // const sigma = document.querySelector("#stress").value
@@ -93,73 +93,73 @@ function  inputdata(){
     // const Modul1 =document.querySelector("#modul").value
     // const SV =document.querySelector("#sarvesf").value
     // const FOS =document.querySelector("#FOS").value
-    const power = ""
-        if (power==="") { 
-            console.log("power =",power);
-         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter Maximum powert Transmit by Pinion</div>`
-              setTimeout(function () {
-          document.getElementById("worning1").innerHTML = ""
-      }, 3000)
-          }
+    // const power = ""
+    //     if (power==="") { 
+    //         console.log("power =",power);
+    //      document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter Maximum powert Transmit by Pinion</div>`
+    //           setTimeout(function () {
+    //       document.getElementById("worning1").innerHTML = ""
+    //   }, 3000)
+    //       }
             
-         else if(RPM===""){  
-            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear Speed of Pinion in RPM</div>`
-            setTimeout(function () {
-        document.getElementById("worning1").innerHTML = ""
-    }, 3000)
+    //      else if(RPM===""){  
+    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear Speed of Pinion in RPM</div>`
+    //         setTimeout(function () {
+    //     document.getElementById("worning1").innerHTML = ""
+    // }, 3000)
     
-        }
+    //     }
             
-         else if(SV===""){  
-            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter factor of sarvice</div>`
-            setTimeout(function () {
-        document.getElementById("worning1").innerHTML = ""
-    }, 3000)
+    //      else if(SV===""){  
+    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter factor of sarvice</div>`
+    //         setTimeout(function () {
+    //     document.getElementById("worning1").innerHTML = ""
+    // }, 3000)
     
-        }
+    //     }
             
-         else if(FOS===""){  
-            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear factor of safty (FOS)</div>`
-            setTimeout(function () {
-        document.getElementById("worning1").innerHTML = ""
-    }, 3000)
+    //      else if(FOS===""){  
+    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear factor of safty (FOS)</div>`
+    //         setTimeout(function () {
+    //     document.getElementById("worning1").innerHTML = ""
+    // }, 3000)
     
-        }
+    //     }
             
-         else if(sigma===""){  
-            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >maxinum stress of pinion</div>`
-            setTimeout(function () {
-        document.getElementById("worning1").innerHTML = ""
-    }, 3000)
+    //      else if(sigma===""){  
+    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >maxinum stress of pinion</div>`
+    //         setTimeout(function () {
+    //     document.getElementById("worning1").innerHTML = ""
+    // }, 3000)
     
-        }
+    //     }
             
-         else if(pteeth===""){  
-            document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "  >please Enter Number Of Teeth Of Pinion </div>`
-            setTimeout(function () {
-        document.getElementById("worning1").innerHTML = ""
-    }, 3000)
+    //      else if(pteeth===""){  
+    //         document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "  >please Enter Number Of Teeth Of Pinion </div>`
+    //         setTimeout(function () {
+    //     document.getElementById("worning1").innerHTML = ""
+    // }, 3000)
     
-        }
+    //     }
             
-         else if(gteeth===""){  
-            document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Number Of Teeth Of Gear </div>`
-            setTimeout(function () {
-        document.getElementById("worning1").innerHTML = ""
-    }, 3000)
-        } 
-        else if(Modul1===""){
-            document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Modul Of Gear </div>`
-               setTimeout(function () {
-           document.getElementById("worning1").innerHTML = ""
-       }, 3000)
-          } 
-        else{
-            data();
-        }
+    //      else if(gteeth===""){  
+    //         document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Number Of Teeth Of Gear </div>`
+    //         setTimeout(function () {
+    //     document.getElementById("worning1").innerHTML = ""
+    // }, 3000)
+    //     } 
+    //     else if(Modul1===""){
+    //         document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Modul Of Gear </div>`
+    //            setTimeout(function () {
+    //        document.getElementById("worning1").innerHTML = ""
+    //    }, 3000)
+    //       } 
+    //     else{
+    //         data();
+    //     }
             
     
-    }
+    // }
     
     
 function data() {
