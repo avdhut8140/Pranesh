@@ -50,6 +50,10 @@ function Gear(){
 }
 
 
+
+
+
+
 const O=60 *1000/6.28
 let X=""
 let velocity =""
@@ -78,6 +82,86 @@ let peffect=""
 let bstrengh=""
 let wstrengh = ""
 
+
+
+function  inputdata(){
+    // var gteeth = (document.querySelector("#gteeth").value)
+    // var pteeth = (document.querySelector("#pteeth").value)
+    // const sigma = document.querySelector("#stress").value
+    // const RPM=document.querySelector("#RPM").value 
+    
+    // const Modul1 =document.querySelector("#modul").value
+    // const SV =document.querySelector("#sarvesf").value
+    // const FOS =document.querySelector("#FOS").value
+    const power = ""
+        if (power==="") { 
+            console.log("power =",power);
+         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter Maximum powert Transmit by Pinion</div>`
+              setTimeout(function () {
+          document.getElementById("worning1").innerHTML = ""
+      }, 3000)
+          }
+            
+         else if(RPM===""){  
+            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear Speed of Pinion in RPM</div>`
+            setTimeout(function () {
+        document.getElementById("worning1").innerHTML = ""
+    }, 3000)
+    
+        }
+            
+         else if(SV===""){  
+            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter factor of sarvice</div>`
+            setTimeout(function () {
+        document.getElementById("worning1").innerHTML = ""
+    }, 3000)
+    
+        }
+            
+         else if(FOS===""){  
+            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear factor of safty (FOS)</div>`
+            setTimeout(function () {
+        document.getElementById("worning1").innerHTML = ""
+    }, 3000)
+    
+        }
+            
+         else if(sigma===""){  
+            document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >maxinum stress of pinion</div>`
+            setTimeout(function () {
+        document.getElementById("worning1").innerHTML = ""
+    }, 3000)
+    
+        }
+            
+         else if(pteeth===""){  
+            document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "  >please Enter Number Of Teeth Of Pinion </div>`
+            setTimeout(function () {
+        document.getElementById("worning1").innerHTML = ""
+    }, 3000)
+    
+        }
+            
+         else if(gteeth===""){  
+            document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Number Of Teeth Of Gear </div>`
+            setTimeout(function () {
+        document.getElementById("worning1").innerHTML = ""
+    }, 3000)
+        } 
+        else if(Modul1===""){
+            document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Modul Of Gear </div>`
+               setTimeout(function () {
+           document.getElementById("worning1").innerHTML = ""
+       }, 3000)
+          } 
+        else{
+            data();
+        }
+            
+    
+    }
+    
+    
 function data() {
 const in1="14.5 Fulldepth"
 const in2="20 Full depth"
@@ -205,6 +289,12 @@ function store(){
     adddata("Beam Strength of Gear  ", bstrengh)|| 
     adddata("Wear Stength of Gear  ", wstrengh) ||
     adddata("Suitable Hardness of Gear (BHN)", BHN) 
+
+    document.getElementById("worning1").innerHTML = `   <div class="alert alert-success " > solution save success fully</div>`
+    setTimeout(function () {
+document.getElementById("worning1").innerHTML = ""
+}, 3000)
+
 }
 function show() {
     getdata("Torque is","Torque is") ||
@@ -241,6 +331,12 @@ function remove() {
     removedata("Beam Strength of Gear  ")|| 
     removedata("Wear Stength of Gear  ",) ||
     removedata("Suitable Hardness of Gear (BHN)") 
+
+    
+    document.getElementById("worning1").innerHTML = `   <div class="alert alert-info " > Remove your save data</div>`
+    setTimeout(function () {
+        document.getElementById("worning2").innerHTML = ""
+    }, 3000)
 }
 const account = []
 
@@ -289,7 +385,7 @@ function display() {
             localStorage.setItem(item.from, JSON.stringify(item.amount))
            
         }
-        if (item.type === "debit") {
+      else  if (item.type === "debit") {
             
             const data = localStorage.getItem(item.from)
             console.log(JSON.parse(data))
@@ -299,7 +395,7 @@ function display() {
                <strong>${JSON.parse(data)}</strong>
              </div>`
          }
-         if (item.type === "remove") {
+       else  if (item.type === "remove") {
             localStorage.removeItem(item.from)
          } 
     }
@@ -307,8 +403,11 @@ function display() {
     
 }
 //stetment end
-
-
-function store1(){
-    
-}
+// var power=""
+// var RPM=""
+// var SV=""
+// var FOS=""
+// var sigma=""
+// var pteeth=""
+// var dteeth=""
+// var Modul1=""

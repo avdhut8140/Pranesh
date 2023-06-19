@@ -29,6 +29,9 @@
           position: fixed;
           background-color: rgb(200, 228, 172);
         }
+        #btn1{
+          background-color:steelblue;
+        }
         #btn{
           background-color:coral;
         }
@@ -93,6 +96,9 @@
     </nav>
     <!-- navbar end -->
 
+     <!-- warning sine bord start -->
+     <div class=" container my-5 text-center fixed-top " id="worning1"></div>
+     <!-- warning sine bord END -->
 
      <!-- carousel start -->
   <div id="carouselExampleCaptions" class="carousel slide alert alert-dark form-control " data-bs-ride="carousel">
@@ -426,35 +432,35 @@
               <div class="col-sm-2 jpj  form-control  " >
                 <p>maximum power of transmition (in waat) </p>
                 <div class="d-flex  form-control">
-                  <input type="number" value="12" id="power">k.Waat
+                  <input class="is-valid" type="number" id="power">k.Waat
                 </div>
               </div>
           
                 <div class="col-sm-2 jpj  form-control  " >
                 <p>maximum speed of gear during trasmition (in RPM)</p>
               <div class="d-flex  form-control">
-                <input type="number" value="1440" id="RPM">RPM
+                <input class="is-valid" type="number" id="RPM">RPM
               </div>  
             </div>
           
             <div class="col-sm-2 jpj  form-control  " >
               <p>Enter serves factor (SV)</p>
             <div class="d-flex  form-control">
-              <input type="number"  value="1.5" id="sarvesf">
+              <input class="is-valid" type="number"   id="sarvesf">
             </div>  
           </div>
           
           <div class="col-sm-2 jpj  form-control  " >
             <p>Enter factor of Safty (FOS)</p>
           <div class="d-flex  form-control">
-            <input type="number"  value="1.5" id="FOS">
+            <input class="is-valid" type="number"   id="FOS">
           </div>  
           </div>
           
               <div class="col-sm-2 jpj form-control  " >
                 <p> Maximum Stress on Gear</p>
                 <div class="d-flex form-control">
-                  <input type="number" value="610" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
+                  <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
                   <select class="form-select " id="material">
                     <option selected>ultimet tensil stress (ult)</option>
                     <option value="1">parmisibal Bending Stress (ben)</option>
@@ -477,14 +483,14 @@
               <div class="col-sm-3 ansrow  form-control  " >
                 <p>number of teeth of pinion </p>
               <div class="d-flex  form-control">
-                <input type="number" value="18" id="pteeth">
+                <input class="is-valid" type="number" id="pteeth">
               </div>  
             </div>
             
             <div class="col-sm-3 ansrow  form-control  " >
               <p>number of teeth of gear </p>
               <div class="d-flex  form-control">
-                <input type="number"  value="72" id="gteeth">
+                <input class="is-valid" type="number"  id="gteeth">
                 
               </div>  
             </div>
@@ -492,7 +498,7 @@
             <div class="col-sm-3 ansrow  form-control  " >
               <p>modulus </p>
               <div class="d-flex  form-control">
-                <input type="number" value="5" id="modul">mm
+                <input class="is-valid" type="number" id="modul">mm
                 
               </div>  
             </div>
@@ -500,7 +506,7 @@
             <div class="col-sm-3 ansrow  form-control  " >
               <p>Diametral pitch </p>
               <div class="d-flex  form-control">
-                <input type="number" id="dp">mm
+                <input class="is-valid" type="number" id="dp">mm
                 
               </div>  
             </div>
@@ -509,7 +515,7 @@
           </div>
           
           
-             
+               
           <div class="container text-center form-control d-none" id="ans">
             <div class="row" id="arow">
               <div class="col-sm-2 jpj form-control d-flex gap-3" id="tcol">
@@ -563,15 +569,18 @@
               
              </div>
           </div>
-          
-          
-            <button type="button"onclick="data()" id="btn" class="btn  w-100">GET</button>
-            <button type="button"onclick="store()" id="btn" class="btn  w-100">SAVE</button>
+          <div class="d-flex">
+            <button type="button"onclick="inputdata()" id="btn" class="btn  w-50">GET</button>
+            <button type="button"onclick="store()" id="btn1" class="btn  w-50">SAVE</button>
+          </div>
           </div>
           <!-- Design end -->
            
         <!-- storage display start --> 
          <div class="offcanvas offcanvas-start"  id="offcanvasExample">
+           <!-- warning sine bord start -->
+     <div class=" container  text-center fixed-top " id="worning2"></div>
+     <!-- warning sine bord END -->
            <div class="offcanvas-header">
              <h5 class="offcanvas-title" id="offcanvasExampleLabel">stetmens</h5>
              <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -597,8 +606,6 @@
                </div></div>
              </div>
            </div>
-         
-       
         <!-- storege  display End -->
 
 
