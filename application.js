@@ -54,34 +54,6 @@ function Gear(){
 
 
 
-const O=60 *1000/6.28
-let X=""
-let velocity =""
-let F = ""
-let condition2= true
-
-var BHN =""
-var gteeth = parseFloat(document.querySelector("#gteeth").value)
-var pteeth = parseFloat(document.querySelector("#pteeth").value)
-const sigma = document.querySelector("#stress").value
-const material = document.querySelector("#material").value
-const torque = document.querySelector("#torque")
-const RPM=document.querySelector("#RPM").value 
-const power = document.querySelector("#power").value
-const dp=document.querySelector("#dp").value
-const Modul1 =document.querySelector("#modul").value
-const SV =document.querySelector("#sarvesf").value
-const FOS =document.querySelector("#FOS").value
-const involut =document.querySelector("#involut").value
-
-let T =""
-let CV=""
-let Y=""
-let width =""
-let peffect=""
-let bstrengh=""
-let wstrengh = ""
-
 
 
 // function  inputdata(){
@@ -160,7 +132,36 @@ let wstrengh = ""
             
     
     // }
+
     
+
+let T =""
+let CV=""
+let Y=""
+let width =""
+let peffect=""
+let bstrengh=""
+let wstrengh = ""
+
+const O=60 *1000/6.28
+let X=""
+let velocity =""
+let F = ""
+let condition2= true
+
+var BHN =""
+var gteeth = parseFloat(document.querySelector("#gteeth").value)
+var pteeth = parseFloat(document.querySelector("#pteeth").value)
+const sigma = document.querySelector("#stress").value
+const material = document.querySelector("#material").value
+const torque = document.querySelector("#torque")
+const RPM=document.querySelector("#RPM").value 
+const power = document.querySelector("#power").value
+const dp=document.querySelector("#dp").value
+const Modul1 =document.querySelector("#modul").value
+const SV =document.querySelector("#sarvesf").value
+const FOS =document.querySelector("#FOS").value
+const involut =document.querySelector("#involut").value
     
 function data() {
 const in1="14.5 Fulldepth"
@@ -178,26 +179,36 @@ const M2="parmisibal Bending Stress (ben)"
         }
 
 
+// Torque start 
+// let T =""
+T= power*9554140.127/RPM
+console.log("torqu=",T);
+console.log("power=",power);
+console.log("RPM=",RPM);
+torque.innerHTML=T
+console.log("torque =",T);
+// Torque end
 
-    // let T =""
-     T= power*9554140.127/RPM
-    console.log(T);
-    torque.innerHTML=T
-    let Modul=""
-    if (dp==="") {
-        Modul=document.querySelector("#modul").value
-    } else {
-        
-        Modul=dp/pteeth
-    }
-     
+// modul start 
+let Modul=""
+if (dp==="") {
+    Modul=document.querySelector("#modul").value
+} else {
     
-    velocity=0.0000523598*Modul*pteeth*RPM
-    document.querySelector("#velocity").innerHTML= velocity
-  
-    // let F = ""
+    Modul=dp/pteeth
+}
+// modul END
+
+// velocity start 
+
+
+velocity=0.0000523598*Modul*pteeth*RPM
+document.querySelector("#velocity").innerHTML= velocity
+// velocity END 
+
+let F = ""
 F= 2*T/(Modul*pteeth)
- document.querySelector("#ptangent").innerHTML= F
+document.querySelector("#ptangent").innerHTML= F
 
  if (velocity>20) {  
      
@@ -206,7 +217,7 @@ F= 2*T/(Modul*pteeth)
  } else {
     
  }
-//  let CV=""
+ let CV=""
  if (velocity<10) {   
     CV=3/(3+velocity)
     
@@ -217,16 +228,16 @@ F= 2*T/(Modul*pteeth)
 
 document.querySelector("#CV").innerHTML= CV
 
-// let peffect=""
+let peffect=""
  peffect= SV*(F/CV)
 document.querySelector("#peffect").innerHTML=  peffect
 console.warn(SV);
 console.error(peffect);
-// let width =""
+let width =""
 width=10*Modul
 document.querySelector("#width").innerHTML=width
 
-// let Y=""
+let Y=""
 console.log(involut);
 if (involut===in1 ) {
     Y=0.389-(2.148/pteeth)
@@ -244,12 +255,12 @@ if (material===M1) {
 }
   console.log(stress);
 
-// let bstrengh=""
+let bstrengh=""
 bstrengh=stress*width*Y*Modul
 document.querySelector("#bstrengh").innerHTML=bstrengh
 console.log(bstrengh);
 
-// let wstrengh = ""
+let wstrengh = ""
 wstrengh= FOS*peffect
 document.querySelector("#wstrengh").innerHTML=wstrengh
 
@@ -271,7 +282,7 @@ console.log("lob=",lob);
 var root1= Math.sqrt(lob)
 console.log("root1=",root1);
 console.log("BHN=",BHN);
-// var BHN =""
+var BHN =""
 BHN = root1
 document.querySelector("#BHN").innerHTML=BHN
 }
