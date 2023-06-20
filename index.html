@@ -80,8 +80,7 @@
         #ryde{
           margin-top: 10vh;
         }
-         
-
+      
       
     </style>
   </head>
@@ -89,9 +88,9 @@
      <!-- navbar start -->
  <nav class="navbar  navbar-expand-sm  bg-dark fixed-top" >
   <button class="  text-danger btn btn-outline-dark  " style="border: 0px;" id="zwindo">Z <sup class="text-warning" style="font-weight: bold;"> windo</sup> </button>
-      <button type="button" class="btn btn-warning"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >Geometry</button>
-                <button type="button" class="btn btn-warning" onclick="saport()">Saport</button>
-                <button type="button" onclick="login()" class="btn btn-outline-warning gap-3" data-bs-toggle="collapse"
+      <button type="button" class="btn btn-warning" id="geometry"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >Geometry</button>
+                <button type="button" class="btn btn-warning" id="Saport" onclick="saport()">Saport</button>
+                <button type="button" onclick="login()" class="btn btn-outline-warning gap-3" id="Design" data-bs-toggle="collapse"
                 data-bs-target="#">Design</button>
     </nav>
     <!-- navbar end -->
@@ -307,8 +306,10 @@
          <div class=" container w-100">
              <div class="row">
                  <div class="col-sm-12 text-center">
-                     <h6 style="font-size: 20px;">Mechanical Element, Shaft ,Gears</h6>
-                     <h6 style="font-size: 20px;"> & Belt Drive Get Machine Design With US</h6>
+                   <div id="title">
+                   <h6 style="font-size: 20px;">Mechanical Element, Shaft ,Gears</h6>
+                   <h6 style="font-size: 20px;"> & Belt Drive Get Machine Design With US</h6>
+                  </div>
                  </div>
              </div>
             </div>
@@ -382,7 +383,7 @@
          <div class="container  d-none"id="subgears">
         <div class="container  gap-2  w-75  "  >
             <div class="row" style="justify-content: space-around text-center;" >
-                <div class="col-sm-4" onclick="signup()"><sup class="text-success" style="font-weight: bold;">UnderMantainance</sup>
+                <div class="col-sm-4" id="SPURE GEAR" onclick="signup()"><sup class="text-success" style="font-weight: bold;">UnderMantainance</sup>
                     <div class="card" style="background-color: rgb(13, 186, 230);">
                         <div class="card-body text-light ">
                             <h6 style="font-weight: bold;">SPURE GEAR</h6>
@@ -392,7 +393,7 @@
 
                 </div>
 
-                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
+                <div class="col-sm-4" id="HELICAL GEAR"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
                     <div class="card" style="background-color: rgb(212, 117, 83);">
                         <div class="card-body text-light ">
                             <h6 style="font-weight: bold;">HELICAL GEAR</h6>
@@ -401,7 +402,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
+                <div class="col-sm-4" id="BEVEL GEAR"><sup class="text-danger" style="font-weight: bold;">IN ACTIVE</sup>
                     <div class="card" style="background-color: rgb(173, 38, 173);">
                         <div class="card-body text-light ">
                             <h6 style="font-weight: bold;">BEVEL GEAR</h6>
@@ -425,8 +426,8 @@
           <div class="container text-center form-control d-none " id="login" >
             <div class="d-flex text-center" style="justify-content: space-between;" id="backdiv">
               <h4 class="w-100">put out application based information</h4>
-              <button type="button" class="btn btn-secondary fixed-bottom" onclick="back()">Back</button>
             </div>
+            <button type="button" class="btn btn-secondary fixed-bottom" onclick="back()">Back</button>
             <div class="container">
             <div class="row justify-content-around text-center" id="design">
               <div class="col-sm-2 jpj  form-control  " >
@@ -569,7 +570,7 @@
               
              </div>
           </div>
-          <div class="d-flex">
+          <div class="d-flex " id="saveGET">
             <button type="button"onclick=" " id="btn" class="btn  w-50">GET</button>
             <button type="button"onclick="store()" id="btn1" class="btn  w-50">SAVE</button>
           </div>

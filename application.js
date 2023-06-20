@@ -38,6 +38,10 @@ function back1(){
 }
 function Gear(){
   
+    gsap.from("#SPURE GEAR",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
+    gsap.from("#HELICAL GEAR",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
+    gsap.from("#BEVEL GEAR",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
+
         document.getElementById("bearings").classList.add("d-none")
         document.getElementById("belt").classList.add("d-none")
         document.getElementById("gears").classList.add("d-none")
@@ -45,7 +49,7 @@ function Gear(){
         document.getElementById("carouselExampleCaptions").classList.add("d-none")
         document.getElementById("subgears").classList.remove("d-none")
       
-        
+
      
 }
 
@@ -422,3 +426,32 @@ function display() {
 // var pteeth=""
 // var dteeth=""
 // var Modul1=""
+const cta = document.getElementById("machined")
+const title = document.getElementById("title")
+const desc = document.getElementById("carouselExampleCaptions")
+
+const tl = gsap.timeline()
+tl.from("#machined", {
+    scale: 2,
+    opacity: 0,
+    duration: 0.5
+})
+
+tl.from(desc, {
+    rotation: 360,
+    scale: 2,
+    opacity: 0,
+    duration: 1
+})
+tl.from(title, {
+    x: "-200vh",
+    duration: 1
+})
+
+
+gsap.from(".navbar",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
+    gsap.from("#zwindo",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
+    gsap.from("#geometry",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
+    gsap.from("#Saport",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
+    gsap.from("#Design",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
+   
