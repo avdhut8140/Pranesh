@@ -6,10 +6,14 @@ function saport(){
     if (condition5) {
         
         document.getElementById("extra").classList.remove("d-none")
+        document.getElementById("ryde").classList.add("d-none")
+        document.getElementById("carouselExampleCaptions").classList.add("d-none")
         condition5 = false
         
       } else {
           document.getElementById("extra").classList.add("d-none")
+          document.getElementById("ryde").classList.remove("d-none")
+          document.getElementById("carouselExampleCaptions").classList.remove("d-none")
           condition5 = true
     }
 }
@@ -155,7 +159,7 @@ let condition2= true
 
 var BHN =""
 var gteeth = parseFloat(document.querySelector("#gteeth").value)
-var pteeth = parseFloat(document.querySelector("#pteeth").value)
+var pteeth= parseFloat(document.querySelector("#pteeth").value)
 const sigma = document.querySelector("#stress").value
 const material = document.querySelector("#material").value
 const torque = document.querySelector("#torque")
@@ -278,7 +282,8 @@ var nacent = 0.16*Q*width*Modul*pteeth
 console.log("Q=",Q);
 console.log("width",width);
 console.log("modul=",Modul);
-console.log("pteeth=",peffect);
+console.log("pteeth=",pteeth);
+console.log("gteeth=",gteeth);
 console.log("nacent=",nacent);
 var lob=10000*FOS*peffect/nacent
 console.log("FOS=",FOS);
@@ -292,131 +297,131 @@ document.querySelector("#BHN").innerHTML=BHN
 }
 
 
-//stetment start
-function store(){
-    adddata("Torque is", T) ||
-    adddata("tagential force is", F)||                  
-    adddata("velocity(m/sec) ", velocity)||
-    adddata("velocity factor ", CV) ||
-    adddata("Effective Lode  ", peffect)|| 
-    adddata("Lewis form factor ", Y) ||
-    adddata(" width of Gear ", width) ||
-    adddata("Beam Strength of Gear  ", bstrengh)|| 
-    adddata("Wear Stength of Gear  ", wstrengh) ||
-    adddata("Suitable Hardness of Gear (BHN)", BHN) 
+// //stetment start
+// function store(){
+//     adddata("Torque is", T) ||
+//     adddata("tagential force is", F)||                  
+//     adddata("velocity(m/sec) ", velocity)||
+//     adddata("velocity factor ", CV) ||
+//     adddata("Effective Lode  ", peffect)|| 
+//     adddata("Lewis form factor ", Y) ||
+//     adddata(" width of Gear ", width) ||
+//     adddata("Beam Strength of Gear  ", bstrengh)|| 
+//     adddata("Wear Stength of Gear  ", wstrengh) ||
+//     adddata("Suitable Hardness of Gear (BHN)", BHN) 
 
-    document.getElementById("worning1").innerHTML = `   <div class="alert alert-success " > solution save success fully</div>`
-    setTimeout(function () {
-document.getElementById("worning1").innerHTML = ""
-}, 3000)
+//     document.getElementById("worning1").innerHTML = `   <div class="alert alert-success " > solution save success fully</div>`
+//     setTimeout(function () {
+// document.getElementById("worning1").innerHTML = ""
+// }, 3000)
 
-}
-function show() {
-    getdata("Torque is","Torque is") ||
-    getdata("tagential force is","tagential force is")||                                
-    getdata("velocity(m/sec) ", "velocity(m/sec) ")||
-    getdata("velocity factor ","velocity factor") ||
-    getdata("Effective Lode  ", "Effective Lode ")|| 
-    getdata("Lewis form factor ","Lewis form factor") ||
-    getdata(" width of Gear "," width of Gear") ||
-    getdata("Beam Strength of Gear  ","Beam Strength of Gear ")|| 
-    getdata("Wear Stength of Gear  ","Wear Stength of Gear") ||
-    getdata("Suitable Hardness of Gear (BHN)","Suitable Hardness of Gear (BHN)") 
+// }
+// function show() {
+//     getdata("Torque is","Torque is") ||
+//     getdata("tagential force is","tagential force is")||                                
+//     getdata("velocity(m/sec) ", "velocity(m/sec) ")||
+//     getdata("velocity factor ","velocity factor") ||
+//     getdata("Effective Lode  ", "Effective Lode ")|| 
+//     getdata("Lewis form factor ","Lewis form factor") ||
+//     getdata(" width of Gear "," width of Gear") ||
+//     getdata("Beam Strength of Gear  ","Beam Strength of Gear ")|| 
+//     getdata("Wear Stength of Gear  ","Wear Stength of Gear") ||
+//     getdata("Suitable Hardness of Gear (BHN)","Suitable Hardness of Gear (BHN)") 
 
    
-let condition4= true
+// let condition4= true
        
-    if (condition4) {
-        document.getElementById("storagecard").classList.remove("d-none")
+//     if (condition4) {
+//         document.getElementById("storagecard").classList.remove("d-none")
       
-        condition4 = false
+//         condition4 = false
         
-      } else {
-        document.getElementById("storagecard").classList.add("d-none")
-             condition4 = true }
-}
-function remove() {
-    removedata("Torque is") ||
-    removedata("tagential force is")||                                
-    removedata("velocity(m/sec) ")||
-    removedata("velocity factor ") ||
-    removedata("Effective Lode  ")|| 
-    removedata("Lewis form factor ") ||
-    removedata(" width of Gear ") ||
-    removedata("Beam Strength of Gear  ")|| 
-    removedata("Wear Stength of Gear  ",) ||
-    removedata("Suitable Hardness of Gear (BHN)") 
+//       } else {
+//         document.getElementById("storagecard").classList.add("d-none")
+//              condition4 = true }
+// }
+// function remove() {
+//     removedata("Torque is") ||
+//     removedata("tagential force is")||                                
+//     removedata("velocity(m/sec) ")||
+//     removedata("velocity factor ") ||
+//     removedata("Effective Lode  ")|| 
+//     removedata("Lewis form factor ") ||
+//     removedata(" width of Gear ") ||
+//     removedata("Beam Strength of Gear  ")|| 
+//     removedata("Wear Stength of Gear  ",) ||
+//     removedata("Suitable Hardness of Gear (BHN)") 
 
     
-    document.getElementById("worning1").innerHTML = `   <div class="alert alert-info " > Remove your save data</div>`
-    setTimeout(function () {
-        document.getElementById("worning2").innerHTML = ""
-    }, 3000)
-}
-const account = []
+//     document.getElementById("worning1").innerHTML = `   <div class="alert alert-info " > Remove your save data</div>`
+//     setTimeout(function () {
+//         document.getElementById("worning2").innerHTML = ""
+//     }, 3000)
+// }
+// const account = []
 
-function removedata(M) {
-    const y = {
-        from: M,
-        type: "remove"
+// function removedata(K) {
+//     const y = {
+//         from: K,
+//         type: "remove"
 
-    }
-    account.unshift(y)
+//     }
+//     account.unshift(y)
 
-    display()
-}
-function adddata(M,P) {
-    const y = {
-        from: M,
-        amount:  P,
-        type: "credit"
+//     display()
+// }
+// function adddata(M,P) {
+//     const y = {
+//         from: M,
+//         amount:  P,
+//         type: "credit"
 
-    }
-    account.unshift(y)
+//     }
+//     account.unshift(y)
 
-    display()
-}
-function getdata(D,R) {
+//     display()
+// }
+// function getdata(D,R) {
    
            
-    const y = {
-        from: D,
-        amount: R,
-        type: "debit"
+//     const y = {
+//         from: D,
+//         amount: R,
+//         type: "debit"
 
-    }
-    account.unshift(y)
-    display()
+//     }
+//     account.unshift(y)
+//     display()
 
 
-}
-function display() {
-    const Statments = document.querySelector("#Statments")
-    console.log(account);
+// }
+// function display() {
+//     const Statments = document.querySelector("#Statments")
+//     console.log(account);
 
-    let str = ""
-    for (const item of account) {
-        if (item.type === "credit") {
-            localStorage.setItem(item.from, JSON.stringify(item.amount))
+//     let str = ""
+//     for (const item of account) {
+//         if (item.type === "credit") {
+//             localStorage.setItem(item.from, JSON.stringify(item.amount))
            
-        }
-      else  if (item.type === "debit") {
+//         }
+//       else  if (item.type === "debit") {
             
-            const data = localStorage.getItem(item.from)
-            console.log(JSON.parse(data))
-            str += `
-            <div class=" alert alert-success d-flex justify-content-between">
-               <p>${item.amount}</p>
-               <strong>${JSON.parse(data)}</strong>
-             </div>`
-         }
-       else  if (item.type === "remove") {
-            localStorage.removeItem(item.from)
-         } 
-    }
-    Statments.innerHTML = str
+//             const data = localStorage.getItem(item.from)
+//             console.log(JSON.parse(data))
+//             str += `
+//             <div class=" alert alert-success d-flex justify-content-between">
+//                <p>${item.amount}</p>
+//                <strong>${JSON.parse(data)}</strong>
+//              </div>`
+//          }
+//        else  if (item.type === "remove") {
+//             localStorage.removeItem(item.from)
+//          } 
+//     }
+//     Statments.innerHTML = str
     
-}
+// }
 //stetment end
 // var power=""
 // var RPM=""

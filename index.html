@@ -89,7 +89,7 @@
  <nav class="navbar  navbar-expand-sm  bg-dark fixed-top" >
   <button class="  text-danger btn btn-outline-dark  " style="border: 0px;" id="zwindo">Z <sup class="text-warning" style="font-weight: bold;"> windo</sup> </button>
       <button type="button" class="btn btn-warning" id="geometry"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >Geometry</button>
-                <button type="button" class="btn btn-warning" id="Saport" onclick="saport()">Saport</button>
+                <button type="button" class="btn btn-warning" id="Saport" onclick="saport()">Contact</button>
                 <button type="button" onclick="login()" class="btn btn-outline-warning gap-3" id="Design" data-bs-toggle="collapse"
                 data-bs-target="#">Design</button>
     </nav>
@@ -433,40 +433,40 @@
               <div class="col-sm-2 jpj  form-control  " >
                 <p>maximum power of transmition (in waat) </p>
                 <div class="d-flex  form-control">
-                  <input class="is-valid" type="number" id="power">k.Waat
+                  <input class="is-valid" type="number"value="12" id="power">k.Waat
                 </div>
               </div>
           
                 <div class="col-sm-2 jpj  form-control  " >
                 <p>maximum speed of gear during trasmition (in RPM)</p>
               <div class="d-flex  form-control">
-                <input class="is-valid" type="number" id="RPM">RPM
+                <input class="is-valid" type="number" value="1440" id="RPM">RPM
               </div>  
             </div>
           
             <div class="col-sm-2 jpj  form-control  " >
               <p>Enter serves factor (SV)</p>
             <div class="d-flex  form-control">
-              <input class="is-valid" type="number"   id="sarvesf">
+              <input class="is-valid" type="number" value="1.5"  id="sarvesf">
             </div>  
           </div>
           
           <div class="col-sm-2 jpj  form-control  " >
             <p>Enter factor of Safty (FOS)</p>
           <div class="d-flex  form-control">
-            <input class="is-valid" type="number"   id="FOS">
+            <input class="is-valid" type="number"  value="1.5" id="FOS">
           </div>  
           </div>
           
               <div class="col-sm-2 jpj form-control  " >
                 <p> Maximum Stress on Gear</p>
                 <div class="d-flex form-control">
-                  <input type="number" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
+                  <input type="number"value="610" id="stress">N/mm<sup class="text-dark" style="font-weight: normal;">2</sup>
+                </div>
                   <select class="form-select " id="material">
                     <option selected>ultimet tensil stress (ult)</option>
                     <option value="1">parmisibal Bending Stress (ben)</option>
                   </select>
-                </div>
               </div>
              
               <div class="col-sm-2 jpj form-control  " >
@@ -474,7 +474,7 @@
                 <select class="form-select " id="involut">
                   <option selected>14.5 Fulldepth</option>
                   <option value="1">20 Full depth</option>
-                  <option value="2 jpj">20  Stub Involut</option>
+                  <option value="2 ">20  Stub Involut</option>
                 </select>
               </div>
           
@@ -484,14 +484,14 @@
               <div class="col-sm-3 ansrow  form-control  " >
                 <p>number of teeth of pinion </p>
               <div class="d-flex  form-control">
-                <input class="is-valid" type="number" id="pteeth">
+                <input class="is-valid" type="number"value="18" id="pteeth">
               </div>  
             </div>
             
             <div class="col-sm-3 ansrow  form-control  " >
               <p>number of teeth of gear </p>
               <div class="d-flex  form-control">
-                <input class="is-valid" type="number"  id="gteeth">
+                <input class="is-valid" type="number"value="72" id="gteeth">
                 
               </div>  
             </div>
@@ -499,7 +499,7 @@
             <div class="col-sm-3 ansrow  form-control  " >
               <p>modulus </p>
               <div class="d-flex  form-control">
-                <input class="is-valid" type="number" id="modul">mm
+                <input class="is-valid" type="number"value="5"id="modul">mm
                 
               </div>  
             </div>
@@ -571,7 +571,7 @@
              </div>
           </div>
           <div class="d-flex " id="saveGET">
-            <button type="button"onclick=" " id="btn" class="btn  w-50">GET</button>
+            <button type="button"onclick="data()" id="btn" class="btn  w-50">GET</button>
             <button type="button"onclick="store()" id="btn1" class="btn  w-50">SAVE</button>
           </div>
           </div>
