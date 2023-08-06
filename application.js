@@ -459,4 +459,7 @@ gsap.from(".navbar",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
     gsap.from("#geometry",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
     gsap.from("#Saport",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
     gsap.from("#Design",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
+
+
+    
    
