@@ -1,34 +1,40 @@
-// const P= document.getElementById("power").value
-// const N=document.getElementById("RPM").value
-// const T=document.getElementById("torque").value...
-let condition5= true
-function saport(){
-    if (condition5) {
+
+
+// let condition5= true
+// function saport(){
+//     if (condition5) {
         
-        document.getElementById("extra").classList.remove("d-none")
-        document.getElementById("ryde").classList.add("d-none")
-        document.getElementById("carouselExampleCaptions").classList.add("d-none")
-        condition5 = false
+//         document.getElementById("extra").classList.remove("d-none")
+//         document.getElementById("ryde").classList.add("d-none")
+//         document.getElementById("carouselExampleCaptions").classList.add("d-none")
+//         condition5 = false
         
-      } else {
-          document.getElementById("extra").classList.add("d-none")
-          document.getElementById("ryde").classList.remove("d-none")
-          document.getElementById("carouselExampleCaptions").classList.remove("d-none")
-          condition5 = true
-    }
-}
+//       } else {
+//           document.getElementById("extra").classList.add("d-none")
+//           document.getElementById("ryde").classList.remove("d-none")
+//           document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+//           condition5 = true
+//     }
+// }
 
 function back(){
 
     document.getElementById("login").classList.add("d-none")
     document.getElementById("ryde").classList.remove("d-none")
+    document.getElementById("subgears").classList.remove("d-none")
+   
    
 }
 
 function signup(){
     document.getElementById("login").classList.remove("d-none")
     document.getElementById("ryde").classList.add("d-none")
+    document.getElementById("subgears").classList.add("d-none")
    
+}
+function back0() {
+    document.getElementById("ryde").classList.add("d-none")
+    document.getElementById("carouselExampleCaptions").classList.add("d-none")
 }
 
 function back1(){
@@ -36,8 +42,9 @@ function back1(){
     document.getElementById("belt").classList.remove("d-none")
     document.getElementById("gears").classList.remove("d-none")
     document.getElementById("titel").classList.remove("d-none")
-    document.getElementById("carouselExampleCaptions").classList.remove("d-none")
     document.getElementById("subgears").classList.add("d-none")
+  
+         
     
 }
 function Gear(){
@@ -45,21 +52,29 @@ function Gear(){
     gsap.from("#SPURE GEAR",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
     gsap.from("#HELICAL GEAR",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
     gsap.from("#BEVEL GEAR",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
-
+    
+        document.getElementById("subgears").classList.remove("d-none")
         document.getElementById("bearings").classList.add("d-none")
         document.getElementById("belt").classList.add("d-none")
         document.getElementById("gears").classList.add("d-none")
         document.getElementById("titel").classList.add("d-none")
         document.getElementById("carouselExampleCaptions").classList.add("d-none")
-        document.getElementById("subgears").classList.remove("d-none")
+    }
       
+function login() {
+   
+        
+        document.getElementById("ryde").classList.remove("d-none")
+        document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+             
+    
 
-     
 }
 
-
-
-
+function back0(){
+    document.getElementById("ryde").classList.add("d-none")
+        document.getElementById("carouselExampleCaptions").classList.add("d-none")
+}
 
 
 
