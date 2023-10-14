@@ -156,6 +156,11 @@ function back0(){
     
     // }
 
+    gsap.to(".emj4", { scale: 3, y:-150, rotate: +360, opacity: "10", duration: 2, delay: 1, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj1", { scale: 3, y:-150, rotate: +360, opacity: "10", duration: 2, delay: 1, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".title", { scale: 1, x:400, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".subtital", { scale: 1, x:400, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+   
     
 
 let T =""

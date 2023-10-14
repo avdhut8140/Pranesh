@@ -69,7 +69,7 @@
          
         }
         .form-select{ 
-          background-color: rgb(137, 240, 192);
+          background-color: #89f0c0;
         }
         #machined{
           border-radius: 100px;
@@ -83,7 +83,39 @@
       #img{
         border-radius:100px ;
       }
-      
+      #welcome{
+        padding: 50px;
+        color: rgb(27, 18, 27);
+        
+      }
+      #subtital{
+        color: tomato;
+      }
+      .emj1{
+        padding: 100px;
+        font-size: 2rem;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(216, 78, 8);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+      }
+      .emj4{
+        padding: 100px;
+        font-size: 2rem;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(168, 229, 25);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+      }
+      #titalN{
+        padding: 100px;
+      }
     </style>
   </head>
   <body>
@@ -100,112 +132,19 @@
      <!-- warning sine bord start -->
      <div class=" container my-5 text-center fixed-top " id="worning1"></div>
      <!-- warning sine bord END -->
-
+     
      <!-- carousel start -->
-  <div id="carouselExampleCaptions" class="carousel slide alert alert-warning" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+ <div class="container alert alert-info text-center" id="titalN">
+
+  <div class="row text-center " id="welcome" >
+    <div class="col-sm-4"><div class="emj1 warning"> <i class="bi bi-emoji-smile-fill"></i></div></div>
+    <div class="col-sm-4">
+      <h2 id="title">welcome to Z-Windo </h2>
+      <p ><h5 id="subtital"> Get ready your project with us....</h5></p>
     </div>
-    <div class="carousel-inner" >
-      <div class="carousel-item active text-center" height="50" width="100">
-        <div class="container" >
-          <a class="text-decoration-none"
-            href="https://www.electronicscomp.com/mega-2560-r3-comaptible-model-india">
-
-            <div class="row text-center" >
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid w-50 " id="img"
-                  src="k.kumar/mega-2560-r3-compatible-model-high-quality-400x400.jpg"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center text-success">
-                <h3>Mega 2560 R3 Board - Compatible Model High Quality</h3>
-                <span>
-                  <p>Rs.1299.00</p>
-              </span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="container">
-          <a class="text-decoration-none"
-            href="https://www.electronicscomp.com/soldron-25w-230v-high-quality-soldering-iron">
-
-            <div class="row text-center">
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid w-40 "id="img"
-                  src="k.kumar/soldron-25w-soldering-iron-400x400.jpg"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center  text-secondary">
-              </div>
-              <div class="col-sm-4">
-                <h3>Soldron 25W/230V High Quality Soldering Iron</h3>
-                <p>Rs.295.00</p>
-              </div>
-            </div>
-        </div>
-        </a>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="container">
-          <a class="text-decoration-none"
-            href="https://www.electronicscomp.com/nano-v3.0-development-board-clone-compatible-model">
-
-            <div class="row text-center">
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid  " id="img" src="https://th.bing.com/th/id/OIP.TABISKORcctQXs46GrOekQHaEK?pid=ImgDet&rs=1"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center text-secondary">
-                <h3>NANO V3.0 Development Board - Clone Compatible Model</h3>
-                <p>Rs.239.00</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-      
-      <div class="carousel-item">
-        <div class="container">
-          <a class="text-decoration-none"
-            href="https://www.electronicscomp.com/raspberry-pi-zero-2-w-india">
-
-            <div class="row text-center" style="justify-content: space-around;">
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid  "id="img" src="/k.kumar//raspberry-pi-zero-2-w-2-400x400.jpg"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center text-secondary">
-                <h3>Raspberry Pi Zero 2 W</h3>
-                <p>Rs.3449.00</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="col-sm-4"><div class="emj4 warning"> <i class="bi bi-emoji-smile-fill"></i></div></div>
   </div>
+ </div>
   <!-- carousel end -->
 
   
