@@ -155,11 +155,9 @@ function back0(){
             
     
     // }
-    gsap.to(".emj1", { scale: 1, x:400, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj4", { scale: 1, x:400, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.to(".title", { scale: 1, x:400, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.to(".subtital", { scale: 1, x:400, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-   
+    gsap.to(".emj1", { scale: 1, x:600, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj4", { scale: 1, x:+600, rotate: +360, opacity: "10", duration: 1, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    
     
 
 let T =""
@@ -452,6 +450,7 @@ document.querySelector("#BHN").innerHTML=BHN
 // var Modul1=""
 const cta = document.getElementById("machined")
 const title = document.getElementById("title")
+const subtital = document.getElementById("subtital")
 const desc = document.getElementById("carouselExampleCaptions")
 
 const tl = gsap.timeline()
@@ -469,6 +468,10 @@ tl.from(desc, {
 })
 tl.from(title, {
     x: "-200vh",
+    duration: 1
+})
+tl.from(subtital, {
+    x: "+200vh",
     duration: 1
 })
 
