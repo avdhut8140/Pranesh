@@ -33,8 +33,8 @@ function signup(){
    
 }
 function back0() {
-    document.getElementById("ryde").classList.add("d-none")
-    document.getElementById("carouselExampleCaptions").classList.add("d-none")
+    // document.getElementById("ryde").classList.add("d-none")
+    // document.getElementById("carouselExampleCaptions").classList.add("d-none")
 }
 
 function back1(){
@@ -64,8 +64,8 @@ function Gear(){
 function login() {
    
         
-        document.getElementById("ryde").classList.remove("d-none")
-        document.getElementById("carouselExampleCaptions").classList.remove("d-none")
+        // document.getElementById("ryde").classList.remove("d-none")
+        // document.getElementById("carouselExampleCaptions").classList.remove("d-none")
              
     
 
@@ -152,11 +152,14 @@ function back0(){
     //     else{
     //         data();
     //     }
-            
-    
-    // }
-    gsap.to(".emj1", { scale: 1, x:30, rotate: +360, opacity: "10", duration: 5, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj4", { scale: 1, x:30, rotate: +360, opacity: "10", duration: 5, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj21", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj22", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj1", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj2", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj3", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj4", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj31", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj32", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     
     
 
