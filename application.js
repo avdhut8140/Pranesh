@@ -155,8 +155,8 @@ function back0(){
             
     
     // }
-    gsap.to(".emj1", { scale: 1, x:50, rotate: +360, opacity: "10", duration: 5, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj4", { scale: 1, x:50, rotate: +360, opacity: "10", duration: 5, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj1", { scale: 1, x:30, rotate: +360, opacity: "10", duration: 5, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj4", { scale: 1, x:30, rotate: +360, opacity: "10", duration: 5, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     
     
 
