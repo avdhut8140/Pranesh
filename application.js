@@ -79,6 +79,11 @@ function back0(){
 
 
 
+    gsap.from(".imoji1", { scale: 2, x:400,y:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji2", { scale: 2, x:400,y:200, rotate: +360, opacity: "10", duration: 3, delay: 1, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji3", { scale: 2, x:-700,y:200, rotate: +360, opacity: "10", duration: 3, delay: 2, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji4", { scale: 2, x:-700,y:200, rotate: +360, opacity: "10", duration: 3, delay: 3, yoyo:true,repeat:500, repeatDelay:0})
+
     gsap.to(".emj21", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     gsap.to(".emj22", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     gsap.to(".emj1", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
@@ -406,7 +411,7 @@ tl.from(subtital, {
 })
 
 
-gsap.from(".navbar",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
+     gsap.from(".navbar",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
     gsap.from("#zwindo",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
     gsap.from("#geometry",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
     gsap.from("#Saport",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})

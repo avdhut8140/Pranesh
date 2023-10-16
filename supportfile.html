@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>information Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <Style>
     #Meclanical
@@ -25,13 +27,77 @@
       border-color: black;
       border-radius: 10px;
     }
+    .imoji1{
+      font-size: 2rem;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(25, 229, 73);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 60%;
+    }
+    .imoji2{
+      font-size: 2rem;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(25, 215, 229);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 60%;
+    }
+    .imoji3{
+      font-size: 2rem;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(229, 25, 25);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            opacity: 60%;
+    }
+    .imoji4{
+      font-size: 2rem;
+      position: relative;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(229, 25, 137);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            opacity: 60%;
+    }
   </Style>
   <body>
    
     <div class=" container w-100" id="heading">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-              <div id="title">
+      <div class="row d-flex ">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 d-flex">
+        <div class="imoji1"><i class="bi bi-bricks"></i></div>
+        <div class="imoji2"><i class="bi bi-bricks"></i></div>
+        <div class="imoji3"><i class="bi bi-bricks"></i></div>
+        <div class="imoji4"><i class="bi bi-bricks"></i></div>
+      </div>
+        <div class="col-sm-4"></div>
+        
+      </div>
+      
+      <div class="row text-center">
+        <div class="col-sm-12 text-center ">
+              <div id="title">    
               <h6 style="font-size: 20px;">Mechanical, Electrical Element</h6>
               <h6 style="font-size: 20px;">  Browse Through a Wide Range Of Genuine Products</h6>
              </div>
@@ -42,10 +108,14 @@
       
        <div class="container text-center w-75" id="gears">
         <h5>Get Best Deals With US</h5>
+        <!-- <div class="div" id="imoji2"><i class="bi bi-bricks"></i></div> -->
+        <!-- <div class="div" id="imoji2"><i class="bi bi-browser-chrome"></i></div> -->
+                      
         <br><br>
-        <div class="row d-flex" style="justify-content: space-around;">
+        <div class="row" style="justify-content: space-around;">
             <div class=" col-sm-6 " id="mech443" onclick="Meclanical()">
-                <div class="card" >
+              
+                <div class="card  d-flex" >
                   <div class="card-body w-100  gap-2" >
                     <img class="w-50" src="k.kumar/mechanical.jpeg" alt="" srcset="">
                     <div class="row">
@@ -56,7 +126,7 @@
                       </div>
                       </div>
                       </div>
-                      </div>
+                     </div>
                      
             <div class="col-sm-6" id="elec443" onclick="Electrical()"> 
                 <div class="card">
@@ -72,12 +142,12 @@
                         </div>
                         </div>
                         </div>
-                        
                         <br><br><br>
-                        <a href="index.html" > <button type="button" id="backhome" class="btn btn-secondary fixed-bottom">Back</button></a>
-                        </div>
+                        
+                    <a href="index.html" > <button type="button" id="backhome" class="btn btn-secondary fixed-bottom">Back</button></a>
                       </div>
-<br><br><br>
+                      
+
                     <div class="container d-none" id="Meclanical443">
                       <div class="row" style="justify-content: space-around;">
                         <div id="resurch" class="col-sm-4 alert alert-primary"> <a style="text-decoration: none;" href="https://afribary.com/works/design-and-development-of-a-hybrid-bicycle"> <h4>Design and Development of a Hybrid Bicycle</h4></a>
@@ -134,16 +204,7 @@
                       
                       <button type="button" onclick="backsuppor2()" class="btn btn-secondary fixed-bottom">Back</button>
                     </div>
-                    
-
-                         
-                         
-                        
-          
-                        
-
-
-    
+                    <br><br><br>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
     integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
