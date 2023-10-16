@@ -79,79 +79,6 @@ function back0(){
 
 
 
-// function  inputdata(){
-    // var gteeth = (document.querySelector("#gteeth").value)
-    // var pteeth = (document.querySelector("#pteeth").value)
-    // const sigma = document.querySelector("#stress").value
-    // const RPM=document.querySelector("#RPM").value 
-    
-    // const Modul1 =document.querySelector("#modul").value
-    // const SV =document.querySelector("#sarvesf").value
-    // const FOS =document.querySelector("#FOS").value
-    // const power = ""
-    //     if (power==="") { 
-    //         console.log("power =",power);
-    //      document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter Maximum powert Transmit by Pinion</div>`
-    //           setTimeout(function () {
-    //       document.getElementById("worning1").innerHTML = ""
-    //   }, 3000)
-    //       }
-            
-    //      else if(RPM===""){  
-    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear Speed of Pinion in RPM</div>`
-    //         setTimeout(function () {
-    //     document.getElementById("worning1").innerHTML = ""
-    // }, 3000)
-    
-    //     }
-            
-    //      else if(SV===""){  
-    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >please Enter factor of sarvice</div>`
-    //         setTimeout(function () {
-    //     document.getElementById("worning1").innerHTML = ""
-    // }, 3000)
-    
-    //     }
-            
-    //      else if(FOS===""){  
-    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >Entear factor of safty (FOS)</div>`
-    //         setTimeout(function () {
-    //     document.getElementById("worning1").innerHTML = ""
-    // }, 3000)
-    
-    //     }
-            
-    //      else if(sigma===""){  
-    //         document.getElementById("worning1").innerHTML = `   <div class="alert alert-danger "  >maxinum stress of pinion</div>`
-    //         setTimeout(function () {
-    //     document.getElementById("worning1").innerHTML = ""
-    // }, 3000)
-    
-    //     }
-            
-    //      else if(pteeth===""){  
-    //         document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "  >please Enter Number Of Teeth Of Pinion </div>`
-    //         setTimeout(function () {
-    //     document.getElementById("worning1").innerHTML = ""
-    // }, 3000)
-    
-    //     }
-            
-    //      else if(gteeth===""){  
-    //         document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Number Of Teeth Of Gear </div>`
-    //         setTimeout(function () {
-    //     document.getElementById("worning1").innerHTML = ""
-    // }, 3000)
-    //     } 
-    //     else if(Modul1===""){
-    //         document.getElementById("worning1").innerHTML = `<div class="alert alert-danger "> please Enter Modul Of Gear </div>`
-    //            setTimeout(function () {
-    //        document.getElementById("worning1").innerHTML = ""
-    //    }, 3000)
-    //       } 
-    //     else{
-    //         data();
-    //     }
     gsap.to(".emj21", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     gsap.to(".emj22", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     gsap.to(".emj1", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
@@ -486,5 +413,30 @@ gsap.from(".navbar",{y:-50, opacity:0,duration:1, delay:0.1 , stagger: 0.5})
     gsap.from("#Design",{y:-50, opacity:0,duration:3, delay:0.1 , stagger: 0.5})
 
 
+    function Meclanical(){
+        document.getElementById("Meclanical443").classList.remove("d-none")
+    document.getElementById("elec443").classList.add("d-none")
+    document.getElementById("heading").classList.add("d-none")
+    }
+
+    function backsupport() {
+        document.getElementById("Meclanical443").classList.add("d-none")
+    document.getElementById("elec443").classList.remove("d-none")
+    document.getElementById("heading").classList.remove("d-none")
+
+    }
+
+    function Electrical(){
+        document.getElementById("electronic443").classList.remove("d-none")
+    document.getElementById("mech443").classList.add("d-none")
+    document.getElementById("heading").classList.add("d-none")
+
+    }
+    function backsuppor2() {
+        document.getElementById("electronic443").classList.add("d-none")
+    document.getElementById("mech443").classList.remove("d-none")
+    document.getElementById("heading").classList.remove("d-none")
+
+    }
     
    
