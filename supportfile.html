@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>information Page</title>
+    <title>Project Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -25,6 +25,9 @@
     }
     #resurch{
       border-color: black;
+      border-radius: 10px;
+    }
+    .card{
       border-radius: 10px;
     }
     .imoji1{
@@ -79,10 +82,25 @@
             overflow: hidden;
             opacity: 60%;
     }
+    .imoji5{
+      font-size: 2rem;
+      position: relative;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+           color: rgb(25, 28, 229);
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            opacity: 60%;
+    }
   </Style>
   <body>
    
-    <div class=" container w-100" id="heading">
+    <div class="text-C img-fluid card w-100 "
+style="background-image: url('k.kumar/backfit433.jpg');viewport-fit: auto; opacity: 80%; background-size: cover; background-repeat:no-repeat ">
+    <div class=" container w-100 text-center  bg-opacity-75 " style="position: relative;"id="heading">
       <div class="row d-flex ">
         <div class="col-sm-4"></div>
         <div class="col-sm-4 d-flex">
@@ -90,6 +108,7 @@
         <div class="imoji2"><i class="bi bi-bricks"></i></div>
         <div class="imoji3"><i class="bi bi-bricks"></i></div>
         <div class="imoji4"><i class="bi bi-bricks"></i></div>
+        <div class="imoji5"><i class="bi bi-bricks"></i></div>
       </div>
         <div class="col-sm-4"></div>
         
@@ -98,29 +117,31 @@
       <div class="row text-center">
         <div class="col-sm-12 text-center ">
               <div id="title">    
-              <h6 style="font-size: 20px;">Mechanical, Electrical Element</h6>
-              <h6 style="font-size: 20px;">  Browse Through a Wide Range Of Genuine Products</h6>
+              <h4 style="font-size: 20px; color:rgb(255, 191, 15);">Mechanical, Electrical Element</h4>
+              <h5 style="font-size: 20px; color:rgb(255, 231, 18);">  Browse Through a Wide Range Of Genuine Products</h5>
              </div>
             </div>
         </div>
-       </div>
-       <br><br>
+        </div>
+       
+       
+       <br>
       
-       <div class="container text-center w-75" id="gears">
-        <h5>Get Best Deals With US</h5>
+       <div class="row text-center "  >
+        <h5 style="color: rgb(229, 25, 137);">Get Best Deals With US</h5>
+      </div>
         <!-- <div class="div" id="imoji2"><i class="bi bi-bricks"></i></div> -->
         <!-- <div class="div" id="imoji2"><i class="bi bi-browser-chrome"></i></div> -->
                       
-        <br><br>
+        <br><br><br>
         <div class="row" style="justify-content: space-around;">
-            <div class=" col-sm-6 " id="mech443" onclick="Meclanical()">
-              
-                <div class="card  d-flex" >
-                  <div class="card-body w-100  gap-2" >
-                    <img class="w-50" src="k.kumar/mechanical.jpeg" alt="" srcset="">
+            <div class=" col-sm-3 " id="mech443" onclick="Meclanical()">
+                <div class="card "  >
+                  <div class="card-body w-100  gap-2 btn" >
+                    <img class=" img-fluid" src="k.kumar/mechanical.jpeg" alt="" srcset="">
                     <div class="row">
-                      <div class="col-sm-12">
-                        <h6>Meclanical</h6>
+                      <div class="col-sm-12 text-center">
+                        <h5>Meclanical</h5>
                         <p> </p>
                       </div>
                       </div>
@@ -128,13 +149,13 @@
                       </div>
                      </div>
                      
-            <div class="col-sm-6" id="elec443" onclick="Electrical()"> 
-                <div class="card">
-                  <div class="card-body w-100  gap-2">
-                    <img class="w-50" src="k.kumar/electrical.jpg" alt="" srcset="">
+            <div class="col-sm-3 " id="elec443" onclick="Electrical()"> 
+                <div class="card ">
+                  <div class="card-body w-100  gap-2 btn">
+                    <img class=" img-fluid w-75" src="k.kumar/electrical.jpg" alt="" srcset="">
                     <div class="row">
-                      <div class="col-sm-12">
-                        <h6>Electrical</h6>
+                      <div class="col-sm-12 text-center">
+                        <h5>Electrical</h5>
                         <p> </p>
                       </div>
                         </div>
@@ -146,9 +167,12 @@
                         
                     <a href="index.html" > <button type="button" id="backhome" class="btn btn-secondary fixed-bottom">Back</button></a>
                       </div>
+                      </div>
                       
 
                     <div class="container d-none" id="Meclanical443">
+                      <br>
+                      <H4 class=" alert alert-danger">Select Suitable Project for you....</H4>
                       <div class="row" style="justify-content: space-around;">
                         <div id="resurch" class="col-sm-4 alert alert-primary"> <a style="text-decoration: none;" href="https://afribary.com/works/design-and-development-of-a-hybrid-bicycle"> <h4>Design and Development of a Hybrid Bicycle</h4></a>
                          
@@ -181,24 +205,25 @@
                       <button type="button" onclick="backsupport()" class="btn btn-secondary fixed-bottom">Back</button>
                     </div>
 
-                    <div class="container d-none" id="electronic443">
+                    <div class="container d-none" id="electronic443"><br>
+                      <H4 class="alert alert-danger">Select Suitable Project for you....</H4>
                       <div class="row" style="justify-content: space-around;">
-                        <div class="col-sm-4 alert alert-dark"><a style="text-decoration: none;" href="https://afribary.com/works/a-decision-model-based-agricultural-electrical-automation-control-system"><h4>A decision model-based agricultural electrical automation control system</h4></a>
+                        <div class="col-sm-4 alert alert-dark" id="resurch"><a style="text-decoration: none;" href="https://afribary.com/works/a-decision-model-based-agricultural-electrical-automation-control-system"><h4>A decision model-based agricultural electrical automation control system</h4></a>
                         <p>This paper introduces a groundbreaking approach to revolutionize traditional farming practices by introducing a decision model-based agricultural electrical automation control system. The system integrates cutting-edge technologies, including artificial intelligence (AI), machine learning (ML), and sensor networks, with the goal of enhancing the efficiency and productivity of agricultural processes. By automating key tasks such as irrigation, fertilization, pest control, and harvesting, the s...</p>
                       </div>
-                        <div class="col-sm-4 alert alert-info"><a style="text-decoration: none;" href="https://afribary.com/works/robotic-soil-instrument"><h4>Robotic Soil Instrument</h4></a>
+                        <div class="col-sm-4 alert alert-info"id="resurch"><a style="text-decoration: none;" href="https://afribary.com/works/robotic-soil-instrument"><h4>Robotic Soil Instrument</h4></a>
                           <p>Soybeans are an important crop for global food security. Every year, soybean yields are reduced by numerous soybean diseases, particularly the soybean cyst nematode (SCN). It is difficult to visually identify the presence of SCN in the field, let alone its population densities or numbers, as there are no obvious aboveground disease symptoms. The only definitive way to assess SCN population densities is to directly extract the SCN cysts from soil and then extract the eggs from cysts and count ...</p></div>
-                        <div class="col-sm-4 alert alert-warning"><a style="text-decoration: none;" href="https://afribary.com/works/wearable-devices-and-connected-worker-solutions"><h4>Wearable Devices and Connected Worker Solutions</h4></a>
+                        <div class="col-sm-4 alert alert-warning"id="resurch"><a style="text-decoration: none;" href="https://afribary.com/works/wearable-devices-and-connected-worker-solutions"><h4>Wearable Devices and Connected Worker Solutions</h4></a>
                           <p>The effects of the workplace on the safety, health, and productivity of personnel can be seen at various levels. To protect and boost general worker health, innovative hardware and software tools have been developed for the detection, elimination, substitution, and regulation of occupational hazards. Wearable technologies make it possible for constant tracking of workers and their environment, whereas connected worker solutions provide contextual information and support for decision-making. H...</p></div>
                       </div>
                       <div class="row" style="justify-content: space-around;">
-                        <div class="col-sm-4 alert alert-danger">
+                        <div class="col-sm-4 alert alert-danger"id="resurch">
                           <a style="text-decoration: none;" href="https://afribary.com/works/modeling-and-simulation-of-a-standalone-photovoltaic-system"><h4>Modeling and Simulation of a Standalone Photovoltaic System</h4></a>
                           <p>ABSTRACT  The increase in hazardous gaseous emission from the conventional source of energy has motivated many scientists to research on the alternate sources of energy which is cleaner. The chief source of renewable energy is the solar energy. The cleanness of this form of energy source motivated this research work. In this work, Modeling and Simulation of a Standalone Photovoltaic System aimed at increasing the efficiency of solar array system was developed. This work was undertaken to dev...</p>
                         </div>
-                        <div class="col-sm-4 alert alert-light "><a style="text-decoration: none;" href="https://afribary.com/works/thermal-modelling-of-induction-machine-using-the-lumped-parameter-model"><h4>Thermal Modelling of Induction Machine Using the Lumped Parameter Model</h4></a>
+                        <div class="col-sm-4 alert alert-light "id="resurch"><a style="text-decoration: none;" href="https://afribary.com/works/thermal-modelling-of-induction-machine-using-the-lumped-parameter-model"><h4>Thermal Modelling of Induction Machine Using the Lumped Parameter Model</h4></a>
                           <p>Abstract Temperature rise is of much concern in the short and long term operations of induction machine, the most useful industrial work icon. This work examines induction machines mean temperatures at the different core parts of the machine. The system’s thermal network is developed, the algebraic and differential equations for the proposed models are solved so as to ascertain the thermal performances of the machine under steady and transient conditions. The lumped parameter thermal method...</p></div>
-                        <div class="col-sm-4 alert alert-success"><a style="text-decoration: none;" href="https://afribary.com/works/policy-and-regulatory-framework-for-fiber-optic-backbone-in-abuja-2"><h4>Policy and Regulatory Framework for Fiber Optic Backbone in Abuja</h4></a>
+                        <div class="col-sm-4 alert alert-success"id="resurch"><a style="text-decoration: none;" href="https://afribary.com/works/policy-and-regulatory-framework-for-fiber-optic-backbone-in-abuja-2"><h4>Policy and Regulatory Framework for Fiber Optic Backbone in Abuja</h4></a>
                           <p>ABSTRACT The purpose of this work is to make a contribution to the “Abuja grand design” by proposing a strategy that would facilitate making Abuja feature as a “modern city”. This proposal is entitled “Policy and Regulatory Framework for Fiber Optic Backbone in Abuja”. The main import of the strategy is to network every home and business in Abuja with fiber optics. The city fiber network would serve as a broadband communication medium to provide essentially unlimited and open comm...</p></div>
                       </div>
                       

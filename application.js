@@ -79,19 +79,20 @@ function back0(){
 
 
 
-    gsap.from(".imoji1", { scale: 2, x:400,y:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".imoji2", { scale: 2, x:400,y:200, rotate: +360, opacity: "10", duration: 3, delay: 1, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".imoji3", { scale: 2, x:-700,y:200, rotate: +360, opacity: "10", duration: 3, delay: 2, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".imoji4", { scale: 2, x:-700,y:200, rotate: +360, opacity: "10", duration: 3, delay: 3, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji1", { scale: 2, x:300,y:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji2", { scale: 2, x:300,y:200, rotate: +360, opacity: "10", duration: 3, delay: 1, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji3", { scale: 2, x:-300,y:200, rotate: +360, opacity: "10", duration: 3, delay: 2, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji4", { scale: 2, x:-300,y:200, rotate: +360, opacity: "10", duration: 3, delay: 3, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".imoji5", { scale: 2, x:-300,y:200, rotate: +360, opacity: "10", duration: 3, delay: 4, yoyo:true,repeat:500, repeatDelay:0})
 
-    gsap.to(".emj21", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.to(".emj22", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.to(".emj1", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.to(".emj2", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj3", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj4", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj31", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
-    gsap.from(".emj32", { scale: 1, x:300, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj21", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj22", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj1", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.to(".emj2", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj3", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj4", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj31", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 3, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
+    gsap.from(".emj32", { scale: 1, x:200, rotate: +360, opacity: "10", duration: 4, delay: 0, yoyo:true,repeat:500, repeatDelay:0})
     
     
 
