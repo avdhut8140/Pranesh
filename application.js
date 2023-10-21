@@ -421,23 +421,15 @@ tl.from(subtital, {
 
     function Meclanical(){
         document.getElementById("Meclanical443").classList.remove("d-none")
-    document.getElementById("elec443").classList.add("d-none")
     document.getElementById("heading").classList.add("d-none")
     }
 
     function backsupport() {
         document.getElementById("Meclanical443").classList.add("d-none")
-    document.getElementById("elec443").classList.remove("d-none")
     document.getElementById("heading").classList.remove("d-none")
 
     }
 
-    function Electrical(){
-        document.getElementById("electronic443").classList.remove("d-none")
-    document.getElementById("mech443").classList.add("d-none")
-    document.getElementById("heading").classList.add("d-none")
-
-    }
     function backsuppor2() {
         document.getElementById("electronic443").classList.add("d-none")
     document.getElementById("mech443").classList.remove("d-none")
