@@ -10,518 +10,126 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <style>
-#backhome45{ margin-top: 10px;}
+#backhome45{ margin-top: 10px;}   
 </style>
 <body>
-  <!-- search -->
-  <div  class="alert alert-primary m-0 collapse" id="search">
-    <div class="container">
-
-      <div class="input-group">
-        <input type="text" class="form-control">
-        <button class="btn btn-primary" type="button">search</button>
-      </div>
-      <h4 class="my-4">Quick links</h4>
-      <div class="row">
-        <div class="col-sm-3">
-          <p> <a href="">link1</a></p>
-          <p> <a href="">link2</a></p>
-          <p> <a href="">link3</a></p>
-          <p> <a href="">link4</a></p>
-        </div>
-        <div class="col-sm-3">
-
-          <p> <a href="">link1</a></p>
-          <p> <a href="">link2</a></p>
-          <p> <a href="">link3</a></p>
-          <p> <a href="">link4</a></p>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="card">
-
-            <div class="card-body">
-              <div class="row">
-
-                <div class="col-sm-6">
-                  <img class="img-fluid"
-                    src="data:image/jpeg;base64,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"
-                    alt="">
-                </div>
-                <div class="col-sm-6">
-                  <h3>featured product</h3>
-                  <p>loren jipseam kkajin </p>
-                  <button class="btn btn-primary" type="button">shop now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- search-end -->
-  <nav class="navbar navbar-expand-lg bg-info navbar-dark">
-    <div class="container">
-      <a class="navbar-brand " href="#">J-MART</a>
+  <nav class="navbar navbar-expand-lg alert alert-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-        <!-- d-flex justify-content-between -->
-
-       
-          <!-- dropdown -->
-
-
-          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1"
-            data-bs-toggle="dropdown">
-            Menu
-          </button>
-          <div class="dropdown-menu alert alert-primary w-100 ">
-            <div class="container">
-
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="d-flex my-5 gap-4">
-                    <span class="fs-1"><i class="bi bi-bag"></i></span>
-                    <div>
-                      <h3>laptop</h3>
-                      <p>loren apple</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-4">
-                  <div class="d-flex my-5 gap-4">
-                    <span class="fs-1"><i class="bi bi-bag"></i></span>
-                    <div>
-                      <h3>laptop</h3>
-                      <p>loren apple</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="d-flex my-5 gap-4">
-                    <span class="fs-1"><i class="bi bi-bag"></i></span>
-                    <div>
-                      <h3>laptop</h3>
-                      <p>loren apple</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="d-flex my-5 gap-4">
-                    <span class="fs-1"><i class="bi bi-bag"></i></span>
-                    <div>
-                      <h3>laptop</h3>
-                      <p>loren apple</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-4">
-                  <div class="d-flex my-5 gap-4">
-                    <span class="fs-1"><i class="bi bi-bag"></i></span>
-                    <div>
-                      <h3>laptop</h3>
-                      <p>loren apple</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="d-flex my-5 gap-4">
-                    <span class="fs-1"><i class="bi bi-bag"></i></span>
-                    <div>
-                      <h3>laptop</h3>
-                      <p>loren apple</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
+      <a href="https://www.amazon.in/s?k=HUMBE%26CO-DC+12V"> <button type="button" class="btn btn-dark">amazon</button></a>
+      <a href="https://www.flipkart.com/search?q=sensors&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=off&as=off"> <button type="button" class="btn btn-info">flipkart</button></a>
+      <button type="button" class="btn btn-primary">Primary</button>
+      
         </div>
-
-
-      </div>
-
-      <div class="ms-auto">
-        <button type="button" class="btn btn-outline-light" data-bs-toggle="collapse"
-          data-bs-target="#collapseExample"><i class="bi bi-search" data-bs-toggle="collapse"
-            data-bs-target="#search"></i></button>
-        <button type="button" class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#pp"><i
-            class="bi bi-bag-check"></i></button>
-        <button type="button" class="btn btn-light" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample">Login<i class="bi bi-person-fill-lock"></i></button>
-      </div>
-
-
-
-    </div>
-    </div>
   </nav>
 
 
   <!-- card end -->
   <!-- carousel start -->
-  <div id="carouselExampleCaptions" class="carousel slide alert alert-warning" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active text-center" height="50" width="100">
-        <div class="container">
-          <a class="text-decoration-none"
-            href="https://www.flipkart.com/infinix-smart-7-azure-blue-64-gb/p/itm7b72b66485a59?pid=MOBGMTW2WYG2A2FM&param=65756&otracker=hp_bannerads_2_2.bannerAdCard.BANNERADS_A_NPWT9BKO4F40">
-
-            <div class="row text-center">
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid w-50 "
-                  src="https://rukminim1.flixcart.com/image/416/416/xif0q/mobile/y/9/z/-original-imagh4bbndqmytqg.jpeg?q=70"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center text-success">
-                <h1 class="text-warning">INFINIX </h1>
-                <H3>Infinix Smart 7</H3>
-                <br>
-                <div class=" d-flex">
-                  <h2>Launch Day Price : </h2>
-                  <span class="fs-3 text-dark"><i class="bi bi-currency-rupee"></i></span>
-                  <h2 class="text-dark">7,299/-</h2>
-                </div>
-                <br><br>
-                <p> sale On 27 Feb, 12PM 4GB | 64 GB At Unbelievable Price</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <div class="container">
-          <a class="text-decoration-none"
-            href="https://www.flipkart.com/elec-flipkart-electronics-sale-store?param=509&otracker=hp_bannerads_1_2.bannerAdCard.BANNERADS_fes_TH4FDYLAXUD4">
-
-            <div class="row text-center">
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid w-40 "
-                  src="https://rukminim1.flixcart.com/image/416/416/xif0q/computer/u/a/n/omen-gaming-laptop-hp-original-imagmha8fueffvkh.jpeg?q=70"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center  text-secondary">
-                <h2 class="text-primary text-bg-light">ELECTR NICS SALE</h2>
-                <H5>24 , 28 Feb.</H5>
-                <h6>powered By</h6>
-                <h4 class="text-success">VIVO V27 Servies</h4>
-                <h1>Gadget Price Drops Here ! </h1>
-                <h1 class="text-warning">Up to 80% Off</h1>
-                <p>Grab Your Deal Now</p>
-              </div>
-
-              <div class="col-sm-4">
-                <div class="card">
-                  <div class="card-body w-5">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm-4 ">
-                          <span class="text-danger fs-1"><i class="bi bi-filetype-png"></i></span>
-                        </div>
-                        <div class="col-sm-8 text-dark ">
-                          <h3 class="fs-4">10% Instant Discount</h3>
-                          <p>on PNG Credit Card</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-        </div>
-        </a>
-      </div>
-
-
-      <div class="carousel-item">
-        <div class="container">
-          <a class="text-decoration-none"
-            href="https://www.flipkart.com/infinix-smart-7-azure-blue-64-gb/p/itm7b72b66485a59?pid=MOBGMTW2WYG2A2FM&param=65756&otracker=hp_bannerads_2_2.bannerAdCard.BANNERADS_A_NPWT9BKO4F40">
-
-            <div class="row text-center">
-              <div class="col-sm-4 text-end ">
-                <img class="img-fluid  " src="https://th.bing.com/th/id/OIP.TABISKORcctQXs46GrOekQHaEK?pid=ImgDet&rs=1"
-                  alt="">
-              </div>
-              <div class="col-sm-4  text-center text-secondary">
-                <div class="d-flex justify-content-between text-dark">
-                  <span class="fs-1"><i class="bi bi-airplane"></i></span>
-                  <H6>#OnlyOnJmart</H6>
-                </div>
-                <p>
-                <h2>Lowest Prices On Air Asia Flights !</h2>
-                </p>
-
-                <h3 class="">International Fare Up to </h3>
-                <div class="d-flex ">
-                  <span class="fs-3"> <i class="bi bi-currency-rupee"></i></span>
-                  <h3>2,500 Off</h3>
-                </div>
-
-                <p class="text-danger">Book Now</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  
+ 
   <!-- carousel end -->
   <br><br>
-  <div class=" alert alert-success">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-4 text-dark">
-          <span class="fs-2"><i class="bi bi-phone"></i></span>
-          <h1>MOBILE</h1>
-          <p>Apple, INFINEX, MI, SAMSUNG, Oppo, Realmi </p>
-        </div>
-
-        <div class="col-sm-4 text-dark">
-          <span class="fs-2"><i class="bi bi-archive"></i></span>
-          <h1>ELECTRONIC</h1>
-          <p>APPLE, LENOVO, HP, DELL, SAMSUNG, </p>
-        </div>
-
-        <div class="col-sm-4 text-dark">
-          <span class="fs-2"><i class="bi bi-airplane-fill"></i></span>
-          <h1>TRAVEL</h1>
-          <p>Air-Bus, Air-India, Indigo, True-Jet, Air-Asia, </p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- fetaured products start -->
-
-  <div class="container ">
-    <div class="row">
-
+  <div class="contener">
+    <div class="row ">
       <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-
-            <div class="container ">
-
-              <div class="row">
-
-                <div class="col-sm-8">
-                  <img class="img-fluid fs-5"
-                    src="https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/dslr-camera/g/t/7/eos-r10-24-2-r10-canon-original-imagg4y52cybasdr.jpeg?q=70"
-                    alt="">
-                </div>
-
-                <div class="col-sm-4">
-                  <img class="img-fluid"
-                    src="https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/dslr-camera/g/t/7/eos-r10-24-2-r10-canon-original-imagg4y52cybasdr.jpeg?q=70"
-                    alt="">
-                  <img class="img-fluid"
-                    src="https://rukminim1.flixcart.com/image/416/416/l5fnhjk0/dslr-camera/g/t/7/eos-r10-24-2-r10-canon-original-imagg4y52cybasdr.jpeg?q=70"
-                    alt="">
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card alert alert-primary">
-
-              <div class="card-body ">
-                <div class="d-flex justify-content-between">
-
-                  <div>Computars</div>
-                  <div class="d-flex">
-                    <div>Starting from </div>
-                    <span><i class="bi bi-currency-rupee"></i></span>
-                    <div>75,999/-</div>
-                  </div>
-                </div>
-                <button type="button" class="btn btn-outline-primary w-100">Shop Now</button>
-              </div>
-
-            </div>
+        <div id="carouselExampleCaptions" class="carousel slide alert alert-warning" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"aria-label="Slide 4"></button>
           </div>
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active text-center" height="50" width="100">
+              <div class="container">
+                <a class="text-decoration-none"
+                  href="https://www.flipkart.com/infinix-smart-7-azure-blue-64-gb/p/itm7b72b66485a59?pid=MOBGMTW2WYG2A2FM&param=65756&otracker=hp_bannerads_2_2.bannerAdCard.BANNERADS_A_NPWT9BKO4F40">
+                  <div class="row text-center">
+                    <div class="col-sm-12 text-end ">
+                      <img class="img-fluid w-100 "
+                        src="shopping/a1.jpg"
+                        alt="">
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+      
+            <div class="carousel-item">
+              <div class="container">
+                <a class="text-decoration-none"
+                  href="https://www.flipkart.com/elec-flipkart-electronics-sale-store?param=509&otracker=hp_bannerads_1_2.bannerAdCard.BANNERADS_fes_TH4FDYLAXUD4">
+                  <div class="row text-center">
+                    <div class="col-sm-12  ">
+                      <img class="img-fluid w-40 "
+                        src="shopping/a2.jpg"
+                        alt="">
+                    </div>
+                  </div>
+              </div>
+              </a>
+            </div>
+      
+            <div class="carousel-item">
+              <div class="container">
+                <a class="text-decoration-none"
+                  href="https://www.flipkart.com/elec-flipkart-electronics-sale-store?param=509&otracker=hp_bannerads_1_2.bannerAdCard.BANNERADS_fes_TH4FDYLAXUD4">
+                  <div class="row text-center">
+                    <div class="col-sm-12  ">
+                      <img class="img-fluid w-40 "
+                        src="shopping/a3.jpg"
+                        alt="">
+                    </div>
+                  </div>
+              </div>
+              </a>
+            </div>
+            
+            <div class="carousel-item">
+              <div class="container">
+                <a class="text-decoration-none"
+                  href="https://www.flipkart.com/infinix-smart-7-azure-blue-64-gb/p/itm7b72b66485a59?pid=MOBGMTW2WYG2A2FM&param=65756&otracker=hp_bannerads_2_2.bannerAdCard.BANNERADS_A_NPWT9BKO4F40">
+                  <div class="row text-center">
+                    <div class="col-sm-12 text-end ">
+                      <img class="img-fluid  " src="shopping/a4.jpg"
+                        alt="">
+                    </div>
+                  </div>
+                </a>
+              </div>
+      
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-header"><H4>Konvio Temperature Meter with ON/OFF button. Aquarium Temperature Meter
+            Indoor and Outdoor Room Temperature Digital Temperature Sensor wired</H4></div>
+          <div class="card-body">body</div>
+          <div class="card-footer">footer</div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- fetaured products end -->
-
-
-
-
-  <!-- login -->
-
-  <div class="offcanvas offcanvas-start" id="offcanvasExample">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p>Enter Email</p>
-      <input type="text" class="form-control" placeholder="Enter Email">
-      <br>
-      <p>Enter Password</p>
-      <input type="text" class="form-control" placeholder="Enter Password">
-    </div>
-  </div>
-  <br><br>
-
-
-
-  <!-- login-end -->
+ 
   <!-- card start -->
 
-
-  <div class="offcanvas offcanvas-start w-100" id="pp">
-    <div class="offcanvas-header bg-primary">
-      <h5 class="offcanvas-title " id="offcanvasExampleLabel">Cart</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="row">
-
-
-
-        <div class="col-sm-4">
-          <img class="img-fluid w-100"
-            src="https://rukminim1.flixcart.com/image/312/312/xif0q/computer/y/6/4/-original-imagkqwzbryf6sp7.jpeg?q=70"
-            alt="">
-        </div>
-
-        <div class="col-sm-4">
-          <h3 class=" my-4">
-            <a class="text-decoration-none"
-              href="https://www.flipkart.com/hp-15s-intel-core-i5-12th-gen-8-gb-512-gb-ssd-windows-11-home-15s-fq5111tu-thin-light-laptop/p/itmbecf654716fd5?pid=COMGG63HGDTFCCGW&lid=LSTCOMGG63HGDTFCCGWLETTA9&marketplace=FLIPKART&q=laptop&store=6bo%2Fb5g&srno=s_1_1&otracker=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_3_na_na_na&iid=en_sJfW09H%2B0f1rdwTLnVrqAKynoY2pIQ6IjqJKn8l542PNZ78rxP9x75BtJmxKMohcInkWRR%2FEvC4og1mB8obwcw%3D%3D&ssid=h74dt0ij400000001677124314658&qH=312f91285e048e09">HP
-              15s Intel Core i5 12th Gen - (8 GB/512 GB SSD/Windows 11 Home) Thin and Light Laptop</a>
-          </h3>
-          <span class="text-success w-80 h-25"><i class="bi bi-bookmark-star-fill"></i></span>
-          <div class="text-secondary"> 4.22,020 Ratings & 167 Reviews</div>
-          <br>
-
-          <ul class=" w-30 h-10">
-            <li class="li">Intel Core i5 Processor (12th Gen)</li>
-            <li class="li"> 8 GB DDR4 RAM</li>
-            <li class="li">64 bit Windows 11 Operating System</li>
-            <li class="li"> 512 GB SSD</li>
-            <li class="li">39.62 cm (15.6 inch) Display</li>
-            <li class="li"> 1 Year Onsite Warranty</li>
-          </ul>
-        </div>
-
-
-
-        <div class="col-sm-4">
-          <strong class="w-100">
-            <span><i class="bi bi-currency-rupee"></i>59,999/-</span>
-          </strong>
-          <div class="d-flex">
-            <div class="text-secondary"> ₹70,23514 &nbsp;</div>
-            <div class="text-success">14% off</div>
-          </div>
-          <div class=""> Free delivery</div>
-          <br>
-          <div> Upto ₹17,300 Off on Exchange </div>
-          <div> No Cost EMI from ₹10,000/month</div>
-        </div>
-
-
-      </div>
-      <br><br><br>
-      <br><br><br>
-      <br><br><br>
-
-
-      <div class="row">
-
-
-
-        <div class="col-sm-4">
-          <img class="img-fluid w-100"
-            src="https://rukminim1.flixcart.com/image/416/416/xif0q/computer/5/k/i/-original-imaggsh8hmh4jmdz.jpeg?q=70"
-            alt="">
-        </div>
-
-        <div class="col-sm-4">
-          <h3 class="my-4">
-            <a class="text-decoration-none"
-              href="https://www.flipkart.com/hp-ryzen-5-hexa-core-5500u-8-gb-512-gb-ssd-windows-11-home-14s-fq1092au-thin-light-laptop/p/itm808dc28eb54e7?pid=COMGAX8EYBZZDXY6&lid=LSTCOMGAX8EYBZZDXY6KGWIPZ&marketplace=FLIPKART&q=apple+laptops&store=6bo%2Fb5g&srno=s_1_12&otracker=search&otracker1=search&fm=search-autosuggest&iid=en_8UVEldlUvMTfG%2FDRs6Hhh1ZTf7I7Rqlc32Zp3g2RMZZtIPGochI7HwqxRuFmcgf65MIKJK8%2BkxwkiWolENu%2Blw%3D%3D&ppt=sp&ppn=sp&ssid=9rha6xszz40000001677125273880&qH=00a483372de9d50a">
-              HP Ryzen 5 Hexa Core 5500U - (8 GB/512 GB SSD/Windows 11 Home) 14s-fq1092au Thin and Light
-              Laptop
-            </a>
-          </h3>
-          <span class="text-success w-80 h-25"><i class="bi bi-bookmark-star-fill"></i></span>
-          <div class="text-secondary"> 1,979 Ratings & 202 Reviews</div>
-          <br>
-
-          <ul class=" w-30 h-10">
-
-
-            <li class="li">AMD Ryzen 5 Hexa Core Processor</li>
-            <li class="li"> 8 GB DDR4 RAM</li>
-            <li class="li">64 bit Windows 11 Operating System</li>
-            <li class="li"> 512 GB SSD</li>
-            <li class="li">35.56 cm (14 inch) Display</li>
-            <li class="li"> Microsoft Office Home & Student 2019, HP Documentation, HP SSRM, HP Smart "
-              1 Year Onsite Warranty</li>
-          </ul>
-        </div>
-
-
-
-        <div class="col-sm-4">
-          <h4 class="w-100">
-            <span><i class="bi bi-currency-rupee"></i>47,990</span>
-          </h4>
-          <div class="d-flex">
-            <div class="text-secondary"> ₹61,388</div>
-            <div class="text-success">21% off</div>
-          </div>
-          <div class=""> Free delivery</div>
-          <br>
-          <div> Upto ₹12,300 Off on Exchange </div>
-          <div> No Cost EMI from ₹7,999/month</div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
 
   <a href="index.html" > <button type="button" id="backhome45" class="btn btn-secondary fixed-bottom">Back</button></a>
                      
